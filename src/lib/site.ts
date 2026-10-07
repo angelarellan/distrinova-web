@@ -1,0 +1,50 @@
+const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : undefined;
+
+/** URL base: variable de entorno > URL de producción de Vercel > subdominio por defecto. */
+export const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  vercelUrl ??
+  "https://distrinova.vercel.app"
+).replace(/\/$/, "");
+
+export const SITE = {
+  name: "Distrinova",
+  legalName: "Distrinova S.R.L.",
+  finalDomain: "distrinovagroup.com",
+  email: "info@distrinovagroup.com",
+  phoneE164: "+5491126424710",
+  phoneDisplay: "+54 9 11 2642-4710",
+  catalogUrl: "https://heyzine.com/flip-book/008c69a47e.html",
+  catalogPdf: "/catalogo-distrinova-2026.pdf",
+  description:
+    "Insumos industriales de alta precisión para Petróleo, Gas, Sistemas de Incendio e Industria Alimenticia. Distribución B2B con respaldo técnico.",
+} as const;
+
+export const WA_NUMBER = "5491126424710";
+
+export function waLink(message: string) {
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+export const WA_DEFAULT_MESSAGE = "Hola Distrinova S.R.L., quisiera realizar una consulta...";
+
+export const NAV = [
+  { label: "Inicio", href: "#inicio" },
+  { label: "Industrias", href: "#industrias" },
+  { label: "Productos", href: "#productos" },
+  { label: "Contacto", href: "#contacto" },
+] as const;
+
+export const CATALOG_PDF_NAV = { label: "Catálogo PDF", href: "/catalogo-distrinova-2026.pdf" } as const;
+
+export const MAIN_NAV = [
+  { label: "Inicio", href: "/" },
+  { label: "Nosotros", href: "/nosotros" },
+  { label: "Industrias", href: "/industrias" },
+  { label: "Productos", href: "/productos" },
+  { label: "Catálogo", href: "/catalogo" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contacto", href: "/contacto" },
+] as const;

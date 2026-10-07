@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    background: #0a0f1d;
+    color-scheme: dark;
+  }
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.025em;
+  }
+  body {
+    @apply bg-ink-950 font-sans text-slate-200 antialiased;
+  }
+  ::selection {
+    background: rgba(37, 99, 235, 0.5);
+    color: #fff;
+  }
+  :focus-visible {
+    outline: 2px solid #0ea5e9;
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  .marquee-track {
+    animation: marquee 55s linear infinite;
+  }
+  .marquee:hover .marquee-track,
+  .marquee:focus-within .marquee-track {
+    animation-play-state: paused;
+  }
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+      flex-wrap: wrap;
+      width: auto;
+    }
+  }
+  .grid-tech {
+    background-image:
+      linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+/* Válvula del hero: un ciclo de 9 s (cerrada → abierta → cerrada). Solo transform/opacity. */
+.vh-disc,
+.vh-lever {
+  transform-box: view-box;
+  animation: vh-turn 9s ease-in-out infinite;
+}
+.vh-disc {
+  transform-origin: 360px 320px;
+}
+.vh-lever {
+  transform-origin: 360px 64px;
+}
+.vh-flow {
+  animation: vh-flow 9s ease-in-out infinite;
+}
+.vh-dash {
+  animation: vh-dash 1.1s linear infinite;
+}
+.vh-float {
+  animation: vh-float 7s ease-in-out infinite;
+}
+.vh-state-closed {
+  animation: vh-closed 9s steps(1) infinite;
+}
+.vh-state-open {
+  animation: vh-open 9s steps(1) infinite;
+}
+@keyframes vh-turn {
+  0%,
+  28% {
+    transform: scaleX(1);
+  }
+  44%,
+  76% {
+    transform: scaleX(0.07);
+  }
+  92%,
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes vh-flow {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  46%,
+  76% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes vh-dash {
+  to {
+    stroke-dashoffset: -82;
+  }
+}
+@keyframes vh-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes vh-closed {
+  0% {
+    opacity: 1;
+  }
+  36% {
+    opacity: 0;
+  }
+  84% {
+    opacity: 1;
+  }
+}
+@keyframes vh-open {
+  0% {
+    opacity: 0;
+  }
+  36% {
+    opacity: 1;
+  }
+  84% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vh-disc,
+  .vh-lever,
+  .vh-flow,
+  .vh-dash,
+  .vh-float,
+  .vh-state-closed,
+  .vh-state-open {
+    animation: none;
+  }
+  .vh-disc,
+  .vh-lever {
+    transform: scaleX(0.55);
+  }
+  .vh-flow {
+    opacity: 0.6;
+  }
+  .vh-state-open {
+    opacity: 0;
+  }
+}
