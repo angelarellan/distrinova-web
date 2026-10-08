@@ -29,13 +29,8 @@ export function HeroPiece() {
       onPointerMove={onMove}
       onPointerLeave={reset}
     >
-      {/* resplandor, anillo técnico y sombra de contacto */}
-      <div className="pointer-events-none absolute inset-[6%] rounded-full bg-[radial-gradient(circle,rgba(11,95,208,0.55),rgba(11,95,208,0)_68%)]" aria-hidden="true" />
-      <svg viewBox="0 0 400 400" className="sc-ring pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true">
-        <circle cx="200" cy="200" r="190" fill="none" stroke="#94A3B8" strokeOpacity=".28" strokeWidth="1" />
-        <circle cx="200" cy="200" r="178" fill="none" stroke="#38BDF8" strokeOpacity=".55" strokeWidth="2" strokeDasharray="1.5 11.4" />
-        <circle cx="200" cy="200" r="190" fill="none" stroke="#0EA5E9" strokeOpacity=".9" strokeWidth="2" strokeDasharray="38 1156" strokeLinecap="round" />
-      </svg>
+      {/* resplandor y sombra de contacto */}
+      <div className="pointer-events-none absolute inset-[4%] rounded-full bg-[radial-gradient(circle,rgba(11,95,208,0.5),rgba(11,95,208,0)_70%)]" aria-hidden="true" />
       <div className="pointer-events-none absolute bottom-[8%] left-[18%] right-[18%] h-[7%] rounded-[50%] bg-[radial-gradient(ellipse,rgba(0,0,0,0.55),transparent_70%)]" aria-hidden="true" />
 
       <div className="absolute inset-0 flex items-center justify-center">

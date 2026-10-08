@@ -5,16 +5,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: { 950: "#0A0F1D", 900: "#0F172A", 800: "#131C33" },
-        brand: { DEFAULT: "#0B5FD0", dark: "#0A4FB0", deep: "#0A1F4D" },
-        accent: { cyan: "#0EA5E9", magenta: "#A855F7", amber: "#F59E0B" },
+        ink: { 950: "#10172A", 900: "#141C30", 800: "#1A2338", border: "#2A374F" },
+        brand: { DEFAULT: "#1E63D6", dark: "#184FB0", deep: "#15325F", light: "#60A5FA" },
+        accent: { cyan: "#38BDF8" },
       },
       fontFamily: {
         sans: ["var(--font-body)", "system-ui", "sans-serif"],
         display: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        glow: "0 0 40px -8px rgba(37,99,235,.55)",
+        glow: "0 0 40px -8px rgba(30,99,214,.45)",
       },
       keyframes: {
         "wa-pulse": {

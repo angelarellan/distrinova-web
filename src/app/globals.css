@@ -6,7 +6,7 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
-    background: #0a0f1d;
+    background: #10172a;
     color-scheme: dark;
   }
   h1,
@@ -18,11 +18,11 @@
     @apply bg-ink-950 font-sans text-slate-200 antialiased;
   }
   ::selection {
-    background: rgba(37, 99, 235, 0.5);
+    background: rgba(30, 99, 214, 0.45);
     color: #fff;
   }
   :focus-visible {
-    outline: 2px solid #0ea5e9;
+    outline: 2px solid #38bdf8;
     outline-offset: 3px;
   }
   @media (prefers-reduced-motion: reduce) {
@@ -61,16 +61,8 @@
 }
 
 /* Pieza del hero: solo transform/opacity. */
-.sc-ring {
-  animation: sc-spin 80s linear infinite;
-}
 .hero-piece-float {
   animation: hero-piece-float 8s ease-in-out infinite;
-}
-@keyframes sc-spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 @keyframes hero-piece-float {
   0%,
@@ -82,7 +74,6 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .sc-ring,
   .hero-piece-float {
     animation: none;
   }

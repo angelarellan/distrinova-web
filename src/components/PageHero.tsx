@@ -46,13 +46,8 @@ export function PageHero({ eyebrow, title, text, crumbs, art, actions }: Props) 
         </div>
         {art && (
           <div className="relative mx-auto hidden aspect-square w-full max-w-sm lg:block" aria-hidden="true">
-            <div className="absolute inset-[8%] rounded-full bg-[radial-gradient(circle,rgba(11,95,208,0.5),transparent_68%)]" />
-            <svg viewBox="0 0 400 400" className="sc-ring absolute inset-0 h-full w-full">
-              <circle cx="200" cy="200" r="190" fill="none" stroke="#94A3B8" strokeOpacity=".28" />
-              <circle cx="200" cy="200" r="178" fill="none" stroke="#38BDF8" strokeOpacity=".55" strokeWidth="2" strokeDasharray="1.5 11.4" />
-              <circle cx="200" cy="200" r="190" fill="none" stroke="#0EA5E9" strokeWidth="2" strokeDasharray="38 1156" strokeLinecap="round" />
-            </svg>
-            <div className="ph-float absolute inset-[14%] flex items-center justify-center">
+            <div className="absolute inset-[6%] rounded-full bg-[radial-gradient(circle,rgba(11,95,208,0.45),transparent_70%)]" />
+            <div className="ph-float absolute inset-[12%] flex items-center justify-center">
               <Image src={art.src} alt="" width={art.w} height={art.h} sizes="320px" className="h-auto max-h-full w-full object-contain drop-shadow-[0_24px_24px_rgba(0,0,0,0.5)]" />
             </div>
           </div>

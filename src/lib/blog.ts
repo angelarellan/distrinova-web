@@ -136,26 +136,6 @@ export const POSTS: Post[] = [
       { t: "p", text: "Cada proceso tiene requisitos propios de higiene y documentación. Antes de definir un producto para una línea alimenticia, consultanos y confirmamos qué respaldo documental corresponde a tu aplicación." },
     ],
   },
-  {
-    slug: "parada-de-planta-que-revisar-en-sellos-y-valvulas",
-    title: "Parada de planta: qué revisar en sellos y válvulas",
-    excerpt: "Una lista de control práctica para aprovechar el tiempo de mantenimiento programado.",
-    category: "Mantenimiento",
-    date: "2026-06-26",
-    readMinutes: 4,
-    image: "/photos/inspeccion-bn.jpg",
-    imageAlt: "Operario inspeccionando cañerías en blanco y negro",
-    productIds: ["empaquetadura-grafito-puro", "junta-espiralada-cgi", "valvula-esferica-3c-acero"],
-    body: [
-      { t: "p", text: "Una parada de planta es la oportunidad de resolver lo que no se puede intervenir en operación. Llegar con el listado de insumos definido evita demoras y compras de urgencia." },
-      { t: "h2", text: "Antes de la parada" },
-      { t: "ul", items: ["Relevar medidas, clases y materiales de bridas, bombas y válvulas a intervenir.", "Revisar el historial de fallas: goteos en prensaestopas, bridas con fugas, válvulas que no cierran.", "Pedir cotización y confirmar disponibilidad con anticipación.", "Prever repuestos para los equipos críticos."] },
-      { t: "h2", text: "Durante la intervención" },
-      { t: "ul", items: ["Inspeccionar el estado de ejes y camisas antes de colocar una empaquetadura nueva.", "Reemplazar juntas en lugar de reutilizarlas.", "Verificar que el material de la junta y del sello sea compatible con el fluido, la temperatura y la presión.", "Controlar el asiento y el cierre de las válvulas antes de reponerlas en servicio."] },
-      { t: "h2", text: "Después" },
-      { t: "p", text: "Registrá qué se cambió y por qué. Esa información orienta la próxima compra y ayuda a detectar problemas repetitivos. Si necesitás asesoramiento para armar el listado, escribinos." },
-    ],
-  },
 ];
 
 export const fmtDate = (iso: string) => new Date(iso + "T12:00:00").toLocaleDateString("es-AR", { day: "numeric", month: "long", year: "numeric" });

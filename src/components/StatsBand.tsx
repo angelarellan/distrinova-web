@@ -13,8 +13,8 @@ const STATS = [
 export function StatsBand() {
   return (
     <section className="relative overflow-hidden py-28 sm:py-36" aria-label="Cobertura técnica del catálogo">
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#0A0F1D_0%,#0A1F4D_22%,#0B5FD0_52%,#0A1F4D_80%,#0A0F1D_100%)]" aria-hidden="true" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(14,165,233,0.22),transparent_65%)]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#10172A_0%,#15325F_50%,#10172A_100%)]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(30,99,214,0.14),transparent_65%)]" aria-hidden="true" />
       <div className="grid-tech absolute inset-0 opacity-30 [mask-image:linear-gradient(to_bottom,transparent,black_30%,black_70%,transparent)]" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-100">Cobertura técnica de nuestro catálogo</p>

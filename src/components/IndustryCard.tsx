@@ -10,13 +10,13 @@ export function IndustryCard({ industry: i, className }: { industry: Industry; c
       <Image src={i.photo} alt={i.photoAlt} fill sizes="(min-width:1024px) 400px, 100vw" className="object-cover transition duration-700 group-hover:scale-105" />
       <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/60 to-ink-950/10" aria-hidden="true" />
       <div className="relative p-6 sm:p-8">
-        <div className="flex items-end justify-between gap-4">
-          <h3 className="flex min-h-[4.5rem] items-end font-display text-3xl font-semibold text-white">{i.title}</h3>
-          <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand text-white transition group-hover:scale-110">
+        <div className="flex items-start justify-between gap-4">
+          <h3 className="font-display text-3xl font-semibold text-white lg:min-h-[4.5rem]">{i.title}</h3>
+          <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand text-white transition group-hover:scale-110">
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
           </span>
         </div>
-        <p className="mt-3 min-h-[3.5rem] text-sm leading-relaxed text-slate-300">{i.summary}</p>
+        <p className="mt-3 text-sm leading-relaxed text-slate-300 lg:min-h-[3.5rem]">{i.summary}</p>
       </div>
     </Link>
   );
