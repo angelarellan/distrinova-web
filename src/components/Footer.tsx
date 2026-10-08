@@ -8,7 +8,7 @@ import { MAIN_NAV, SITE, WA_DEFAULT_MESSAGE, waLink } from "@/lib/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
-  const certs = CERTIFICATIONS.filter((c) => c.confirmed || process.env.NODE_ENV !== "production");
+  const certs = CERTIFICATIONS;
   return (
     <footer className="relative border-t border-white/10 bg-ink-950 pt-20">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 pb-14 sm:px-6 md:grid-cols-5 lg:px-8">
@@ -31,11 +31,6 @@ export function Footer() {
               <Link href="/catalogo" className="text-slate-300 transition hover:text-white">
                 Catálogo
               </Link>
-            </li>
-            <li>
-              <a href={SITE.catalogPdf} target="_blank" rel="noopener noreferrer" className="text-slate-300 transition hover:text-white">
-                Catálogo PDF
-              </a>
             </li>
           </ul>
         </nav>
@@ -77,7 +72,7 @@ export function Footer() {
                 <span>
                   <span className="block font-semibold text-white">{c.name}</span>
                   <span className="block text-sm text-slate-300">{c.scope}</span>
-                  {!c.confirmed && <span className="mt-1 inline-block rounded bg-amber-400/15 px-2 py-0.5 text-[11px] font-semibold text-amber-300">Vista previa: pendiente de confirmar (no se muestra en producción)</span>}
+                  {c.status === "en-proceso" && <span className="mt-1 inline-block rounded-full border border-accent-cyan/40 bg-accent-cyan/10 px-2.5 py-0.5 text-[11px] font-semibold text-accent-cyan">Certificación en proceso</span>}
                 </span>
               </li>
             ))}

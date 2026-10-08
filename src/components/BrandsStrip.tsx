@@ -9,14 +9,14 @@ export function BrandsStrip() {
   const row = (hidden: boolean) => (
     <ul className="flex shrink-0 items-center gap-6 pr-6" aria-hidden={hidden || undefined}>
       {base.map((b, i) => (
-        <li key={`${b.name}-${i}`} className="flex h-24 w-64 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] px-6 grayscale transition hover:border-white/25 hover:grayscale-0">
-          {b.logo ? <Image src={b.logo} alt={b.name} width={180} height={60} className="max-h-12 w-auto object-contain" /> : <span className="font-display text-2xl font-semibold uppercase tracking-wide text-slate-300">{b.name}</span>}
+        <li key={`${b.name}-${i}`} className="flex h-28 w-64 items-center justify-center rounded-2xl border border-white/10 bg-white px-8 py-4 transition hover:border-accent-cyan/40">
+          <Image src={b.logo} alt={`Logo de ${b.name}`} width={b.w} height={b.h} sizes="200px" className="max-h-16 w-auto object-contain" />
         </li>
       ))}
     </ul>
   );
   return (
-    <div className="marquee relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]" role="region" aria-label="Marcas con las que trabajamos">
+    <div className="marquee relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]" role="region" aria-label="Marcas que importamos">
       <div className="marquee-track flex w-max" style={{ animationDuration: "40s" }}>
         {row(false)}
         {row(true)}

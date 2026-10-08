@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, m } from "framer-motion";
-import { Mail, Menu, X } from "lucide-react";
-import { WhatsAppGlyph } from "./WhatsAppGlyph";
+import { ArrowRight, Mail, Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
-import { MAIN_NAV, SITE, WA_DEFAULT_MESSAGE, waLink } from "@/lib/site";
+import { MAIN_NAV, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -67,14 +66,9 @@ export function Header() {
           >
             <Mail className="h-4 w-4" />
           </a>
-          <a
-            href={waLink(WA_DEFAULT_MESSAGE)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary"
-          >
-            <WhatsAppGlyph className="h-5 w-5" /> WhatsApp
-          </a>
+          <Link href="/contacto" className="btn btn-primary">
+            Solicitar cotización <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
 
         <button
@@ -110,14 +104,9 @@ export function Header() {
               ))}
             </nav>
             <div className="mt-8 flex flex-col gap-3">
-              <a
-                href={waLink(WA_DEFAULT_MESSAGE)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-              >
-                <WhatsAppGlyph className="h-5 w-5" /> Consultar por WhatsApp
-              </a>
+              <Link href="/contacto" className="btn btn-primary">
+                Solicitar cotización <ArrowRight className="h-4 w-4" />
+              </Link>
               <a href={`mailto:${SITE.email}`} className="btn btn-outline">
                 <Mail className="h-4 w-4" /> {SITE.email}
               </a>

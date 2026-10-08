@@ -72,7 +72,7 @@ export default function Home() {
       {BRANDS.length > 0 && (
         <section className="bg-ink-950 py-20" aria-label="Marcas">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-sm font-semibold uppercase tracking-[0.18em] text-accent-cyan">Nuestras marcas</p>
+            <p className="text-center text-sm font-semibold uppercase tracking-[0.18em] text-accent-cyan">Marcas que importamos</p>
             <div className="mt-10">
               <BrandsStrip />
             </div>

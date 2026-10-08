@@ -1,7 +1,6 @@
-import { FileDown, } from "lucide-react";
-import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
+import { FileDown, Mail } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { SITE, WA_DEFAULT_MESSAGE, waLink } from "@/lib/site";
+import { SITE } from "@/lib/site";
 
 export function CtaBand({ title = "¿Necesitás cotizar un insumo?", text = "Contanos qué necesitás y te respondemos con la ficha técnica y disponibilidad." }: { title?: string; text?: string }) {
   return (
@@ -16,8 +15,8 @@ export function CtaBand({ title = "¿Necesitás cotizar un insumo?", text = "Con
                 <p className="mt-3 text-blue-50/90">{text}</p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <a href={waLink(WA_DEFAULT_MESSAGE)} target="_blank" rel="noopener noreferrer" className="btn btn-light">
-                  <WhatsAppGlyph className="h-5 w-5" /> Escribinos por WhatsApp
+                <a href={`mailto:${SITE.email}`} className="btn btn-light">
+                  <Mail className="h-5 w-5" /> Escribinos
                 </a>
                 <a href={SITE.catalogPdf} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
                   <FileDown className="h-4 w-4" /> Catálogo PDF

@@ -91,11 +91,11 @@ export function ContactForm() {
       </label>
       <p className="text-sm text-slate-300">Con “Enviar por email” se abre tu aplicación de correo con el mensaje listo para enviar a {SITE.email}. Con WhatsApp se abre un chat con nuestro equipo.</p>
       <div className="flex flex-col gap-3 sm:flex-row">
-        <button type="button" onClick={send("wa")} className="btn btn-wa flex-1">
-          <WhatsAppGlyph className="h-5 w-5" /> Enviar por WhatsApp
+        <button type="button" onClick={send("mail")} className="btn btn-primary flex-1">
+          <Mail className="h-5 w-5" /> Enviar por email
         </button>
-        <button type="button" onClick={send("mail")} className="btn btn-outline flex-1">
-          <Mail className="h-4 w-4" /> Enviar por email
+        <button type="button" onClick={send("wa")} className="btn btn-outline flex-1">
+          <WhatsAppGlyph className="h-5 w-5 text-[#4ADE80]" /> Enviar por WhatsApp
         </button>
       </div>
     </form>

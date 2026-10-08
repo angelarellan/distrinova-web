@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Check, FileDown, } from "lucide-react";
-import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
+import { ArrowLeft, Check, FileDown, Mail } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { ProductImage } from "@/components/ProductImage";
 import { ProductCard } from "@/components/ProductCard";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
 import { CATEGORY_LABEL, PRODUCTS } from "@/lib/products";
-import { SITE, SITE_URL, waLink } from "@/lib/site";
+import { SITE, SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
   return PRODUCTS.map((p) => ({ id: p.id }));
@@ -38,7 +37,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
     name: p.name,
     description: p.description,
     category: CATEGORY_LABEL[p.category],
-    brand: { "@type": "Organization", name: SITE.legalName },
+    brand: { "@type": "Brand", name: p.brand },
     ...(p.image ? { image: `${SITE_URL}${p.image}` } : {}),
   };
 
@@ -57,13 +56,8 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                 </div>
               )}
               <div className="mt-6 flex flex-col gap-3">
-                <a
-                  href={waLink(`Hola Distrinova S.R.L., quisiera consultar por el producto: ${p.name}.`)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-wa"
-                >
-                  <WhatsAppGlyph className="h-5 w-5" /> Consultar por WhatsApp este Producto
+                <a href={`mailto:${SITE.email}?subject=${encodeURIComponent(`Consulta por ${p.name}`)}`} className="btn btn-primary">
+                  <Mail className="h-5 w-5" /> Consultar por este producto
                 </a>
                 <a href={SITE.catalogPdf} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
                   <FileDown className="h-4 w-4" /> Ver catálogo PDF
@@ -87,7 +81,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             <Reveal>
               <h2 className="font-display text-xl font-semibold text-white">Especificaciones técnicas</h2>
               <dl className="mt-4 divide-y divide-white/10 rounded-2xl border border-white/10 text-sm">
-                {p.specs.map(([k, v]) => (
+                {[["Marca", p.brand] as [string, string], ...p.specs].map(([k, v]) => (
                   <div key={k} className="grid gap-1 px-4 py-3 sm:grid-cols-3 sm:gap-4">
                     <dt className="text-slate-400">{k}</dt>
                     <dd className="text-slate-200 sm:col-span-2">{v}</dd>

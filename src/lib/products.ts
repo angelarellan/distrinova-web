@@ -47,6 +47,8 @@ export interface Product {
   features: string[];
   applications?: string[];
   tables?: Table[];
+  /** Marca que importa Distrinova. */
+  brand: string;
 }
 
 const PACKING_SECTIONS: Table = {
@@ -56,7 +58,8 @@ const PACKING_SECTIONS: Table = {
 };
 
 
-export const PRODUCTS: Product[] = [
+// Todo el Catálogo Oil & Gas 2026 corresponde a la línea DNova (insumos para petróleo, gas e industrias).
+const CATALOG: Omit<Product, "brand">[] = [
   {
     id: "empaquetadura-teflon",
     name: "Empaquetadura Teflon",
@@ -537,4 +540,6 @@ export const PRODUCTS: Product[] = [
     features: ["Pesos teóricos calculados; pueden variar según tolerancias de fabricación", "Combinaciones de diámetros en el catálogo PDF"],
   },
 ];
+
+export const PRODUCTS: Product[] = CATALOG.map((p) => ({ ...p, brand: "DNova" }));
 

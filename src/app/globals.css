@@ -60,49 +60,30 @@
   }
 }
 
-/* Escaparate del hero: solo transform/opacity. */
+/* Pieza del hero: solo transform/opacity. */
 .sc-ring {
   animation: sc-spin 80s linear infinite;
 }
-.sc-dot::after {
-  content: "";
-  position: absolute;
-  inset: -6px;
-  border-radius: 9999px;
-  border: 1.5px solid rgba(14, 165, 233, 0.7);
-  animation: sc-ping 2.2s ease-out infinite;
-}
-.sc-progress {
-  transform-origin: left;
-  animation: sc-fill linear forwards;
+.hero-piece-float {
+  animation: hero-piece-float 8s ease-in-out infinite;
 }
 @keyframes sc-spin {
   to {
     transform: rotate(360deg);
   }
 }
-@keyframes sc-ping {
-  0% {
-    transform: scale(0.6);
-    opacity: 0.9;
-  }
+@keyframes hero-piece-float {
+  0%,
   100% {
-    transform: scale(1.8);
-    opacity: 0;
+    transform: translateY(0) rotate(-1.2deg);
   }
-}
-@keyframes sc-fill {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
+  50% {
+    transform: translateY(-14px) rotate(1.2deg);
   }
 }
 @media (prefers-reduced-motion: reduce) {
   .sc-ring,
-  .sc-dot::after,
-  .sc-progress {
+  .hero-piece-float {
     animation: none;
   }
 }
@@ -119,12 +100,6 @@
   }
   .btn-light {
     @apply bg-white text-brand-dark hover:bg-blue-50;
-  }
-  .btn-wa {
-    @apply bg-[#25D366] text-ink-950 hover:brightness-110;
-  }
-  .btn-wa-soft {
-    @apply border border-[#25D366]/50 bg-[#25D366]/10 text-[#4ADE80] hover:bg-[#25D366]/20;
   }
 }
 

@@ -19,7 +19,7 @@ export function AboutSplit() {
           <Reveal className="lg:col-span-5">
             <SectionHeading eyebrow="Sobre Distrinova" title="Distribuimos los insumos que mantienen en marcha tu planta" />
             <p className="mt-6 text-lg leading-relaxed text-slate-300">
-              Somos una distribuidora de insumos industriales para Petróleo, Gas, Sistemas de Incendio e Industria Alimenticia. Reunimos en un solo proveedor empaquetaduras, juntas, válvulas y accesorios de cañería, con información técnica clara de cada producto.
+              Trabajamos con la industria desde 2015 y hoy somos importadores de las marcas DNova y Fixy, especializados en insumos para Petróleo, Gas, Sistemas de Incendio e Industria Alimenticia. Reunimos en un solo proveedor empaquetaduras, juntas, válvulas y accesorios de cañería, con la calidad como criterio central y la información técnica de cada producto a mano.
             </p>
             <Link href="/nosotros" className="mt-8 inline-flex items-center gap-2 font-semibold text-accent-cyan hover:underline">
               Conocer más sobre nosotros <ArrowRight className="h-4 w-4" />
