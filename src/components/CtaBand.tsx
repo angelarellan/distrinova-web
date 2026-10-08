@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FileDown, } from "lucide-react";
 import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
 import { Reveal } from "./Reveal";
@@ -20,9 +19,9 @@ export function CtaBand({ title = "¿Necesitás cotizar un insumo?", text = "Con
                 <a href={waLink(WA_DEFAULT_MESSAGE)} target="_blank" rel="noopener noreferrer" className="btn btn-light">
                   <WhatsAppGlyph className="h-5 w-5" /> Escribinos por WhatsApp
                 </a>
-                <Link href={SITE.catalogPdf} target="_blank" className="btn btn-outline">
+                <a href={SITE.catalogPdf} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
                   <FileDown className="h-4 w-4" /> Catálogo PDF
-                </Link>
+                </a>
               </div>
             </div>
           </div>
