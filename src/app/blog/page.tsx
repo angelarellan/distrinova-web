@@ -24,7 +24,7 @@ export default function BlogPage() {
               </StaggerItem>
             ))}
           </Stagger>
-          <p className="mt-10 text-xs text-slate-500">Fotografías: Unsplash.</p>
+          <p className="mt-10 text-xs text-slate-400">Fotografías: Unsplash.</p>
         </div>
       </section>
       <CtaBand />

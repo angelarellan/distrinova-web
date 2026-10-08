@@ -1,33 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
-import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight, BookOpen, MessageCircle } from "lucide-react";
 import { HeroBackground } from "./HeroBackground";
-import { ValveHero } from "./ValveHero";
+import { ProductShowcase } from "./ProductShowcase";
 import { WA_DEFAULT_MESSAGE, waLink } from "@/lib/site";
 import { easeOut } from "@/lib/motion";
 
 export function HomeHero() {
-  const ref = useRef<HTMLElement>(null);
-  const reduce = useReducedMotion();
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [0, 80]);
-  const fade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-
   const item = (i: number) => ({
-    initial: { opacity: 0, y: 24 },
+    initial: { opacity: 1, y: 16 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.7, delay: 0.1 + i * 0.1, ease: easeOut },
   });
 
   return (
-    <section ref={ref} className="relative isolate flex min-h-[100svh] items-center overflow-hidden pt-24">
+    <section className="relative isolate flex min-h-[100svh] items-center overflow-x-clip pt-24 pb-12">
       <HeroBackground />
-      <m.div style={{ y, opacity: fade }} className="mx-auto grid w-full max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-6 lg:px-8">
-        <div>
-        <m.p {...item(0)} className="flex items-center gap-3 text-sm font-medium uppercase tracking-[0.2em] text-slate-300">
+      <div className="mx-auto grid w-full max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-6 lg:px-8">
+        <div className="min-w-0">
+        <m.p {...item(0)} className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">
           <span className="h-px w-10 bg-brand" aria-hidden="true" />
           Petróleo · Gas · Sistemas de Incendio · Alimenticia
         </m.p>
@@ -37,7 +30,7 @@ export function HomeHero() {
         </m.h1>
 
         <m.p {...item(2)} className="mt-7 max-w-xl text-lg leading-relaxed text-slate-300 sm:text-xl">
-          Distribuimos sellado industrial, válvulas y accesorios de cañería con fichas técnicas completas y asesoramiento para elegir el producto correcto.
+          Distribuimos sellado industrial, válvulas y accesorios de cañería para equipos de compras, mantenimiento e ingeniería, con fichas técnicas completas y asesoramiento.
         </m.p>
 
         <m.div {...item(3)} className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -55,10 +48,10 @@ export function HomeHero() {
           </Link>
         </m.div>
         </div>
-        <m.div initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.3, ease: easeOut }} className="mx-auto w-full max-w-md lg:max-w-none">
-          <ValveHero className="h-auto w-full" />
-        </m.div>
-      </m.div>
+        <div className="mx-auto w-full min-w-0 lg:max-w-none">
+          <ProductShowcase />
+        </div>
+      </div>
     </section>
   );
 }

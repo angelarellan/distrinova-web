@@ -20,7 +20,7 @@ export function ProductCard({ product: p, sizes = "(min-width:1024px) 400px, (mi
           <dl className="mt-4 space-y-2 border-t border-white/10 pt-4 text-sm">
             {p.highlights.map((h) => (
               <div key={h.label} className="flex justify-between gap-4">
-                <dt className="text-slate-500">{h.label}</dt>
+                <dt className="text-slate-400">{h.label}</dt>
                 <dd className="text-right text-slate-200">{h.value}</dd>
               </div>
             ))}

@@ -24,7 +24,20 @@ export default function Home() {
   return (
     <>
       <HomeHero />
-      <AboutSplit />
+
+      <section className="bg-ink-950 py-24 sm:py-32" aria-label="Qué ofrecemos">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <SectionHeading eyebrow="Qué ofrecemos" title="Tres familias de producto, una sola fuente" />
+            <Reveal>
+              <Link href="/productos" className={link}>
+                Ver todos los productos <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Reveal>
+          </div>
+          <CategoryTiles />
+        </div>
+      </section>
 
       <section className="bg-ink-900 py-24 sm:py-32" aria-label="Industrias">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -46,29 +59,28 @@ export default function Home() {
         </div>
       </section>
 
-      <StatsBand />
-
-      <section className="bg-ink-950 py-24 sm:py-32" aria-label="Qué ofrecemos">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-            <SectionHeading eyebrow="Qué ofrecemos" title="Tres familias de producto, una sola fuente" />
-            <Reveal>
-              <Link href="/productos" className={link}>
-                Ver todos los productos <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Reveal>
-          </div>
-          <CategoryTiles />
-        </div>
-      </section>
-
-      <section className="border-y border-white/10 bg-ink-900 py-10" aria-label="Normas y materiales">
+      <section className="bg-ink-900 pb-12" aria-label="Normas y materiales">
         <Marquee items={NORMS} />
       </section>
 
+      <StatsBand />
+
       <Benefits />
 
-      <section className="bg-ink-950 py-24 sm:py-32" aria-label="Blog">
+      <AboutSplit />
+
+      {BRANDS.length > 0 && (
+        <section className="bg-ink-950 py-20" aria-label="Marcas">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <p className="text-center text-sm font-semibold uppercase tracking-[0.18em] text-accent-cyan">Nuestras marcas</p>
+            <div className="mt-10">
+              <BrandsStrip />
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="bg-ink-900 py-24 sm:py-32" aria-label="Blog">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <SectionHeading eyebrow="Blog" title="Guías técnicas para elegir mejor" />
@@ -87,17 +99,6 @@ export default function Home() {
           </Stagger>
         </div>
       </section>
-
-      {BRANDS.length > 0 && (
-        <section className="border-t border-white/10 bg-ink-900 py-20" aria-label="Marcas">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-accent-cyan">Nuestras marcas</p>
-            <div className="mt-10">
-              <BrandsStrip />
-            </div>
-          </div>
-        </section>
-      )}
 
       <CtaBand />
     </>

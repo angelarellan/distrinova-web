@@ -5,8 +5,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: { 950: "#0A0F1D", 900: "#0F172A", 800: "#162038" },
-        brand: { DEFAULT: "#2563EB", dark: "#1D4ED8" },
+        ink: { 950: "#0A0F1D", 900: "#0F172A", 800: "#131C33" },
+        brand: { DEFAULT: "#0B5FD0", dark: "#0A4FB0", deep: "#0A1F4D" },
         accent: { cyan: "#0EA5E9", magenta: "#A855F7", amber: "#F59E0B" },
       },
       fontFamily: {

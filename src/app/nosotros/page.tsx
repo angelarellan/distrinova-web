@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Handshake, Layers, Microscope, Target } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
-import { GlassIcon } from "@/components/GlassIcon";
+import { Icon3D, type Icon3DName } from "@/components/Icon3D";
 import { ParallaxPhoto } from "@/components/ParallaxPhoto";
 import { StatsBand } from "@/components/StatsBand";
 import { BrandsStrip } from "@/components/BrandsStrip";
@@ -16,12 +15,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/nosotros" },
 };
 
-const PILLARS = [
-  { icon: Target, title: "Foco industrial", text: "Insumos pensados para operaciones donde la continuidad importa: sellado, válvulas y accesorios de cañería." },
-  { icon: Microscope, title: "Información técnica clara", text: "Cada producto tiene su ficha con materiales, normas, presión, temperatura y dimensiones, para decidir con datos." },
-  { icon: Layers, title: "Línea integrada", text: "Varias familias de producto reunidas para que tu equipo de compras resuelva más con un solo proveedor." },
-  { icon: Handshake, title: "Trato directo", text: "Atención directa por WhatsApp y correo para cotizar, consultar medidas o confirmar disponibilidad." },
-] as const;
+const PILLARS: { icon: Icon3DName; title: string; text: string }[] = [
+  { icon: "factory", title: "Foco industrial", text: "Insumos pensados para operaciones donde la continuidad importa: sellado, válvulas y accesorios de cañería." },
+  { icon: "search", title: "Información técnica clara", text: "Cada producto tiene su ficha con materiales, normas, presión, temperatura y dimensiones, para decidir con datos." },
+  { icon: "chains", title: "Línea integrada", text: "Varias familias de producto reunidas para que tu equipo de compras resuelva más con un solo proveedor." },
+  { icon: "phone", title: "Trato directo", text: "Atención directa por WhatsApp y correo para cotizar, consultar medidas o confirmar disponibilidad." },
+];
 
 // Hitos verificables a partir del catálogo y del sitio. TODO(cliente): sumar fecha de fundación y demás hitos reales.
 const MILESTONES = [
@@ -47,7 +46,7 @@ export default function NosotrosPage() {
             </Reveal>
           </div>
           <Reveal>
-            <ParallaxPhoto src="/photos/tecnico-casco.jpg" alt="Técnico con casco amarillo en una instalación industrial" sizes="(min-width:1024px) 45vw, 100vw" className="aspect-[4/3]" />
+            <ParallaxPhoto src="/photos/valvulas-azul.jpg" alt="Válvulas y cañerías en una instalación industrial" sizes="(min-width:1024px) 45vw, 100vw" className="aspect-[4/3]" />
           </Reveal>
         </div>
       </section>
@@ -79,10 +78,12 @@ export default function NosotrosPage() {
           <SectionHeading eyebrow="Qué nos define" title="Cuatro criterios en cada propuesta" />
           <Stagger className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
             {PILLARS.map((p) => (
-              <StaggerItem key={p.title} className="border-t border-white/15 pt-6">
-                <GlassIcon icon={p.icon} className="h-9 w-9" />
-                <h3 className="mt-5 font-display text-2xl font-semibold text-white">{p.title}</h3>
-                <p className="mt-2 leading-relaxed text-slate-400">{p.text}</p>
+              <StaggerItem key={p.title} className="h-full">
+                <div className="h-full rounded-2xl border border-white/10 bg-ink-900 p-6">
+                  <Icon3D name={p.icon} />
+                  <h3 className="mt-5 font-display text-2xl font-bold text-white">{p.title}</h3>
+                  <p className="mt-2 leading-relaxed text-slate-300">{p.text}</p>
+                </div>
               </StaggerItem>
             ))}
           </Stagger>
@@ -92,7 +93,7 @@ export default function NosotrosPage() {
       {BRANDS.length > 0 && (
         <section className="border-t border-white/10 bg-ink-900 py-20" aria-label="Marcas">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-accent-cyan">Marcas con las que trabajamos</p>
+            <p className="text-center text-sm font-semibold uppercase tracking-[0.18em] text-accent-cyan">Marcas con las que trabajamos</p>
             <div className="mt-10">
               <BrandsStrip />
             </div>

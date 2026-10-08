@@ -8,7 +8,7 @@ export function PageHero({ eyebrow, title, text, crumbs }: { eyebrow: string; ti
       <div className="grid-tech absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]" aria-hidden="true" />
       <div className="absolute -right-24 top-0 h-80 w-96 rounded-full bg-brand/20 blur-[120px]" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <nav aria-label="Migas de pan" className="mb-6 flex items-center gap-1.5 text-xs text-slate-500">
+        <nav aria-label="Migas de pan" className="mb-6 flex items-center gap-1.5 text-xs text-slate-400">
           <Link href="/" className="hover:text-white">
             Inicio
           </Link>

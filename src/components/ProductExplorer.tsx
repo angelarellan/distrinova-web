@@ -46,9 +46,9 @@ export function ProductExplorer() {
             <div key={g.label} className="mt-14">
               <div className="mb-5 flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-baseline sm:justify-between">
                 <h2 className="font-display text-xl font-semibold text-white">
-                  {g.label} <span className="ml-2 text-xs font-normal uppercase tracking-[0.16em] text-slate-500">{CATEGORY_LABEL[g.category]}</span>
+                  {g.label} <span className="ml-2 text-xs font-normal uppercase tracking-[0.16em] text-slate-400">{CATEGORY_LABEL[g.category]}</span>
                 </h2>
-                <p className="text-sm text-slate-500">{g.hint}</p>
+                <p className="text-sm text-slate-400">{g.hint}</p>
               </div>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {g.items.map((p) => (

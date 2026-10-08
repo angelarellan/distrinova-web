@@ -5,7 +5,7 @@ import { Mail, MessageCircle } from "lucide-react";
 import { PRODUCTS } from "@/lib/products";
 import { SITE, waLink } from "@/lib/site";
 
-const field = "mt-1.5 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500 focus:border-accent-cyan focus:outline-none";
+const field = "mt-1.5 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-400 focus:border-accent-cyan focus:outline-none";
 
 /** Sin backend: arma el mensaje y lo envía por WhatsApp o correo. */
 export function ContactForm() {

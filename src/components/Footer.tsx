@@ -7,26 +7,17 @@ import { MAIN_NAV, SITE, WA_DEFAULT_MESSAGE, waLink } from "@/lib/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const certs = CERTIFICATIONS.filter((c) => c.confirmed || process.env.NODE_ENV !== "production");
   return (
     <footer className="relative border-t border-white/10 bg-ink-950 pt-20">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 pb-14 sm:px-6 md:grid-cols-5 lg:px-8">
         <div className="md:col-span-2">
           <Logo />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">{SITE.description}</p>
-          {CERTIFICATIONS.length > 0 && (
-            <ul className="mt-6 flex flex-wrap items-center gap-3" aria-label="Certificaciones">
-              {CERTIFICATIONS.map((c) => (
-                <li key={c.name} title={c.description} className="flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-xs font-semibold text-slate-200">
-                  {c.logo && <Image src={c.logo} alt="" width={28} height={28} />}
-                  {c.name}
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
 
         <nav aria-label="Pie de página">
-          <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Navegación</h2>
+          <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Navegación</h2>
           <ul className="mt-4 space-y-3 text-sm">
             {MAIN_NAV.map((n) => (
               <li key={n.href}>
@@ -44,7 +35,7 @@ export function Footer() {
         </nav>
 
         <div className="md:col-span-2">
-          <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Contacto directo</h2>
+          <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Contacto directo</h2>
           <ul className="mt-4 space-y-4 text-sm">
             <li>
               <a href={`mailto:${SITE.email}`} className="inline-flex items-center gap-3 text-slate-200 transition hover:text-white">
@@ -65,8 +56,30 @@ export function Footer() {
         </div>
       </div>
 
+      {certs.length > 0 && (
+        <div className="border-t border-white/10">
+          <ul className="mx-auto flex max-w-7xl flex-wrap items-center gap-4 px-4 py-6 sm:px-6 lg:px-8" aria-label="Certificaciones">
+            {certs.map((c) => (
+              <li key={c.name} className="flex items-center gap-4 rounded-xl border border-white/15 bg-ink-900 py-3 pl-3 pr-5">
+                <span className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-brand bg-ink-950 text-center font-display leading-none text-white">
+                  <span className="absolute inset-1 rounded-full border border-dashed border-white/25" aria-hidden="true" />
+                  <span className="relative">
+                    <span className="block text-sm font-extrabold">ISO</span>
+                    <span className="block text-[9px] font-semibold text-accent-cyan">{c.name.replace("ISO ", "").split(":")[0]}</span>
+                  </span>
+                </span>
+                <span>
+                  <span className="block font-semibold text-white">{c.name}</span>
+                  <span className="block text-sm text-slate-300">{c.scope}</span>
+                  {!c.confirmed && <span className="mt-1 inline-block rounded bg-amber-400/15 px-2 py-0.5 text-[11px] font-semibold text-amber-300">Vista previa: pendiente de confirmar (no se muestra en producción)</span>}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-slate-400 sm:flex-row sm:px-6 lg:px-8">
           <p>
             © {year} {SITE.legalName} Todos los derechos reservados.
           </p>

@@ -88,7 +88,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
                 ),
               )}
             </div>
-            <p className="mt-10 border-t border-white/10 pt-4 text-xs text-slate-500">Fotografía: Unsplash. Datos de producto según Catálogo Distrinova Oil &amp; Gas 2026.</p>
+            <p className="mt-10 border-t border-white/10 pt-4 text-xs text-slate-400">Fotografía: Unsplash. Datos de producto según Catálogo Distrinova Oil &amp; Gas 2026.</p>
           </div>
         </div>
       </article>

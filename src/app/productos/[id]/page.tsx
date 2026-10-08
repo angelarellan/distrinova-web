@@ -53,7 +53,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   <ProductImage product={p} sizes="(min-width:1024px) 40vw, 100vw" priority />
                 </div>
               )}
-              {p.imageNote && <p className="mt-2 text-xs text-slate-500">{p.imageNote}</p>}
+              {p.imageNote && <p className="mt-2 text-xs text-slate-400">{p.imageNote}</p>}
               <div className="mt-6 flex flex-col gap-3">
                 <a
                   href={waLink(`Hola Distrinova S.R.L., quisiera consultar por el producto: ${p.name}.`)}
@@ -87,7 +87,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               <dl className="mt-4 divide-y divide-white/10 rounded-2xl border border-white/10 text-sm">
                 {p.specs.map(([k, v]) => (
                   <div key={k} className="grid gap-1 px-4 py-3 sm:grid-cols-3 sm:gap-4">
-                    <dt className="text-slate-500">{k}</dt>
+                    <dt className="text-slate-400">{k}</dt>
                     <dd className="text-slate-200 sm:col-span-2">{v}</dd>
                   </div>
                 ))}
@@ -134,7 +134,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     </tbody>
                   </table>
                 </div>
-                {t.note && <p className="mt-2 text-xs text-slate-500">{t.note}</p>}
+                {t.note && <p className="mt-2 text-xs text-slate-400">{t.note}</p>}
               </Reveal>
             ))}
           </div>

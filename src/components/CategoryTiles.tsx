@@ -27,7 +27,7 @@ export function CategoryTiles() {
               </div>
               <div className="mt-6 flex items-start justify-between gap-4">
                 <h3 className="font-display text-3xl font-semibold text-white">{CATEGORY_LABEL[t.key]}</h3>
-                <ArrowUpRight className="mt-1.5 h-5 w-5 shrink-0 text-slate-500 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" aria-hidden="true" />
+                <ArrowUpRight className="mt-1.5 h-5 w-5 shrink-0 text-slate-400 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" aria-hidden="true" />
               </div>
               <p className="mt-2 text-slate-400">{t.text}</p>
             </Link>

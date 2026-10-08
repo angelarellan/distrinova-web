@@ -11,7 +11,7 @@ export function BlogCard({ post: p, priority = false }: { post: Post; priority?:
           <Image src={p.image} alt={p.imageAlt} fill priority={priority} sizes="(min-width:1024px) 380px, (min-width:640px) 50vw, 100vw" className="object-cover transition duration-700 group-hover:scale-105" />
         </div>
         <div className="flex flex-1 flex-col p-6">
-          <p className="flex items-center gap-3 text-xs uppercase tracking-[0.14em] text-slate-500">
+          <p className="flex items-center gap-3 text-xs uppercase tracking-[0.14em] text-slate-400">
             <span className="font-medium text-accent-cyan">{p.category}</span>
             <span aria-hidden="true">·</span>
             <time dateTime={p.date}>{fmtDate(p.date)}</time>

@@ -1,11 +1,7 @@
-import { Flame, Fuel, UtensilsCrossed, type LucideIcon } from "lucide-react";
-import type { Tone } from "@/components/GlassIcon";
 
 export interface Industry {
   slug: string;
   title: string;
-  icon: LucideIcon;
-  tone: Tone;
   summary: string;
   detail: string;
   specs: string[];
@@ -18,8 +14,6 @@ export const INDUSTRIES: Industry[] = [
   {
     slug: "petroleo-gas",
     title: "Petróleo & Gas",
-    icon: Fuel,
-    tone: "blue",
     summary: "Sellado, válvulas y accesorios de cañería para instalaciones de hidrocarburos.",
     detail:
       "Líneas de proceso, bombas, intercambiadores y recipientes a presión requieren sellado confiable y componentes dimensionados según norma. Reunimos empaquetaduras de grafito puro para temperaturas extremas, juntas espiraladas ASME B16.20, válvulas esféricas 1000 WOG y accesorios para soldar.",
@@ -31,8 +25,6 @@ export const INDUSTRIES: Industry[] = [
   {
     slug: "incendio",
     title: "Sistemas de Incendio",
-    icon: Flame,
-    tone: "amber",
     summary: "Válvulas y componentes para redes de agua.",
     detail:
       "Las redes de agua exigen válvulas de operación simple y cierre confiable. Contamos con válvulas de mariposa wafer de hierro dúctil con asiento EPDM, PN10 / PN16. Consultanos por la línea disponible y las aprobaciones que requiere tu proyecto.",
@@ -44,8 +36,6 @@ export const INDUSTRIES: Industry[] = [
   {
     slug: "alimenticia",
     title: "Industria Alimenticia",
-    icon: UtensilsCrossed,
-    tone: "cyan",
     summary: "Materiales inertes y acero inoxidable para procesos que no deben contaminarse.",
     detail:
       "Donde el fluido no puede contaminarse, importan los materiales: PTFE inerte, acero inoxidable AISI 316 y sellos que no alteran el producto. Cinta de PTFE expandido compatible con requisitos FDA, empaquetadura Teflon y válvulas esféricas en inoxidable.",
