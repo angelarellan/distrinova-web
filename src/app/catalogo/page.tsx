@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function CatalogoPage() {
   return (
     <>
-      <PageHero eyebrow="Catálogo 2026" title="Catálogo Oil & Gas" text="Todas las fichas técnicas en un solo documento. Descargalo en PDF o navegalo en formato flipbook." crumbs={[{ label: "Catálogo" }]} />
+      <PageHero eyebrow="Catálogo 2026" title="Catálogo Oil & Gas" text="Todas las fichas técnicas en un solo documento. Descargalo en PDF o navegalo en formato flipbook." art={{ src: "/showcase/cinta-ptfe.webp", w: 900, h: 1108 }} crumbs={[{ label: "Catálogo" }]} />
       <section className="bg-ink-950 py-16 sm:py-24">
         <div className="mx-auto max-w-6xl space-y-6 px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -23,7 +23,7 @@ export default function CatalogoPage() {
                 <h2 className="font-display text-xl font-semibold text-white">Descargar catálogo en PDF</h2>
                 <p className="mt-1 text-sm text-slate-400">Versión 2026, 17 páginas. Funciona sin conexión.</p>
               </div>
-              <a href={SITE.catalogPdf} download className="inline-flex h-12 items-center gap-2 rounded-full bg-gradient-to-r from-brand to-brand-dark px-7 font-medium text-white shadow-glow transition hover:brightness-110">
+              <a href={SITE.catalogPdf} download className="btn btn-primary">
                 <FileDown className="h-4 w-4" /> Descargar PDF
               </a>
             </div>

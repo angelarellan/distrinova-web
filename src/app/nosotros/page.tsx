@@ -32,7 +32,7 @@ const MILESTONES = [
 export default function NosotrosPage() {
   return (
     <>
-      <PageHero eyebrow="Nosotros" title="Distribución industrial con respaldo técnico" text="Distrinova S.R.L. abastece a equipos de compras, mantenimiento e ingeniería de las industrias del petróleo, el gas, la protección contra incendio y la alimenticia." crumbs={[{ label: "Nosotros" }]} />
+      <PageHero eyebrow="Nosotros" title="Distribución industrial con respaldo técnico" text="Distrinova S.R.L. abastece a equipos de compras, mantenimiento e ingeniería de las industrias del petróleo, el gas, la protección contra incendio y la alimenticia." art={{ src: "/showcase/valvula-esferica-3c-inox.webp", w: 900, h: 635 }} crumbs={[{ label: "Nosotros" }]} />
 
       <section className="bg-ink-950 py-20 sm:py-28">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">

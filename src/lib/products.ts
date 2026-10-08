@@ -39,7 +39,6 @@ export interface Product {
   image?: string;
   /** "cover" para fotos con fondo propio (no blanco). */
   imageFit?: "cover";
-  imageNote?: string;
   description: string;
   /** Datos clave visibles en la tarjeta. */
   highlights: { label: string; value: string }[];
@@ -482,7 +481,6 @@ export const PRODUCTS: Product[] = [
     category: "canerias",
     group: "Codos y tapas",
     image: "/products/codos-y-tapas.svg",
-    imageNote: "Imagen ilustrativa",
     description:
       "Codos de 45°, 90° y 180° y tapas para cañerías, fabricados según normas DIN. Tabla completa de dimensiones, pesos y tolerancias en el catálogo PDF.",
     highlights: [
@@ -523,7 +521,6 @@ export const PRODUCTS: Product[] = [
     category: "canerias",
     group: "Tees y reducciones",
     image: "/products/tees-y-reducciones.svg",
-    imageNote: "Imagen ilustrativa",
     description:
       "Tees (iguales o reductoras) y reductores concéntricos y excéntricos para cañerías. Tablas completas de diámetros, longitudes y pesos en el catálogo PDF.",
     highlights: [

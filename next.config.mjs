@@ -14,6 +14,9 @@ const csp = [
   "base-uri 'self'",
   "form-action 'self'",
   "frame-ancestors 'self'",
+  "manifest-src 'self'",
+  "media-src 'self'",
+  "worker-src 'self' blob:",
   ...(isDev ? [] : ["upgrade-insecure-requests"]),
 ].join("; ");
 
@@ -26,10 +29,14 @@ const securityHeaders = [
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
   { key: "X-DNS-Prefetch-Control", value: "on" },
+  { key: "Cross-Origin-Resource-Policy", value: "same-site" },
+  { key: "X-Permitted-Cross-Domain-Policies", value: "none" },
+  { key: "Origin-Agent-Cluster", value: "?1" },
 ];
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  turbopack: { root: import.meta.dirname },
   reactStrictMode: true,
   poweredByHeader: false,
   images: {

@@ -257,7 +257,7 @@ export function ProductShowcase() {
             <p className="font-display text-xl font-bold text-white">{cur.name}</p>
             <p className="mt-0.5 text-sm text-slate-300">{cur.line}</p>
           </div>
-          <Link href={`/productos/${cur.id}`} className="inline-flex h-11 shrink-0 items-center gap-1.5 rounded-full border border-white/20 px-4 text-sm font-medium text-white transition hover:bg-white/10">
+          <Link href={`/productos/${cur.id}`} className="btn btn-outline shrink-0">
             Ver ficha <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>

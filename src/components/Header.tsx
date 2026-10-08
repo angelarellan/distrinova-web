@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, m } from "framer-motion";
-import { Mail, Menu, MessageCircle, X } from "lucide-react";
+import { Mail, Menu, X } from "lucide-react";
+import { WhatsAppGlyph } from "./WhatsAppGlyph";
 import { Logo } from "./Logo";
 import { MAIN_NAV, SITE, WA_DEFAULT_MESSAGE, waLink } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -70,9 +71,9 @@ export function Header() {
             href={waLink(WA_DEFAULT_MESSAGE)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-10 items-center gap-2 rounded-full bg-gradient-to-r from-brand to-brand-dark px-5 text-sm font-medium text-white shadow-glow transition hover:brightness-110"
+            className="btn btn-primary"
           >
-            <MessageCircle className="h-4 w-4" /> WhatsApp
+            <WhatsAppGlyph className="h-5 w-5" /> WhatsApp
           </a>
         </div>
 
@@ -113,11 +114,11 @@ export function Header() {
                 href={waLink(WA_DEFAULT_MESSAGE)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand to-brand-dark font-medium text-white"
+                className="btn btn-primary"
               >
-                <MessageCircle className="h-4 w-4" /> Consultar por WhatsApp
+                <WhatsAppGlyph className="h-5 w-5" /> Consultar por WhatsApp
               </a>
-              <a href={`mailto:${SITE.email}`} className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/15 text-slate-200">
+              <a href={`mailto:${SITE.email}`} className="btn btn-outline">
                 <Mail className="h-4 w-4" /> {SITE.email}
               </a>
             </div>

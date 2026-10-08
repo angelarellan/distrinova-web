@@ -44,7 +44,6 @@ export const MAIN_NAV = [
   { label: "Nosotros", href: "/nosotros" },
   { label: "Industrias", href: "/industrias" },
   { label: "Productos", href: "/productos" },
-  { label: "Catálogo", href: "/catalogo" },
   { label: "Blog", href: "/blog" },
   { label: "Contacto", href: "/contacto" },
 ] as const;

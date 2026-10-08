@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight, } from "lucide-react";
+import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
 import { ProductImage } from "./ProductImage";
 import type { Product } from "@/lib/products";
 import { waLink } from "@/lib/site";
@@ -33,9 +34,9 @@ export function ProductCard({ product: p, sizes = "(min-width:1024px) 400px, (mi
           href={waLink(`Hola Distrinova S.R.L., quisiera consultar por el producto: ${p.name}.`)}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 text-sm font-medium text-[#4ADE80] transition hover:bg-[#25D366]/20"
+          className="btn btn-wa-soft w-full"
         >
-          <MessageCircle className="h-4 w-4" /> Consultar por WhatsApp este Producto
+          <WhatsAppGlyph className="h-5 w-5" /> Consultar por WhatsApp este Producto
         </a>
       </div>
     </article>

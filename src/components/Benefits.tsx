@@ -18,7 +18,7 @@ export function Benefits() {
           <SectionHeading eyebrow="Por qué Distrinova" title="Un proveedor técnico para tu planta" />
           <Reveal delay={0.1}>
             <p className="mt-6 text-lg text-slate-300">Elegir bien el insumo evita paradas. Por eso ponemos la información técnica al frente.</p>
-            <Link href="/contacto" className="mt-8 inline-flex h-12 items-center rounded-full bg-brand px-7 font-medium text-white transition hover:bg-brand-dark">
+            <Link href="/contacto" className="btn btn-primary mt-8">
               Hablar con un asesor
             </Link>
           </Reveal>

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Mail, MessageCircle } from "lucide-react";
+import { Mail, } from "lucide-react";
+import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
 import Image from "next/image";
 import { Logo } from "./Logo";
 import { CERTIFICATIONS } from "@/lib/certifications";
@@ -27,6 +28,11 @@ export function Footer() {
               </li>
             ))}
             <li>
+              <Link href="/catalogo" className="text-slate-300 transition hover:text-white">
+                Catálogo
+              </Link>
+            </li>
+            <li>
               <a href={SITE.catalogPdf} target="_blank" rel="noopener noreferrer" className="text-slate-300 transition hover:text-white">
                 Catálogo PDF
               </a>
@@ -49,7 +55,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 text-slate-200 transition hover:text-white"
               >
-                <MessageCircle className="h-4 w-4 text-[#4ADE80]" aria-hidden="true" /> WhatsApp {SITE.phoneDisplay}
+                <WhatsAppGlyph className="h-4 w-4 text-[#4ADE80]" /> WhatsApp {SITE.phoneDisplay}
               </a>
             </li>
           </ul>

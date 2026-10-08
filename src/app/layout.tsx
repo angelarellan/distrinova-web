@@ -10,7 +10,7 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 const font = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-body", display: "swap" });
 
-const TITLE = "Distrinova S.R.L. | Insumos industriales para Petróleo, Gas, Incendio y Alimenticia";
+const TITLE = "Distrinova S.R.L. | Insumos industriales Oil & Gas";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

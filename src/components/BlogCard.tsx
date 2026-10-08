@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { fmtDate, type Post } from "@/lib/blog";
 
-export function BlogCard({ post: p, priority = false }: { post: Post; priority?: boolean }) {
+export function BlogCard({ post: p, priority = false, as: H = "h3" }: { post: Post; priority?: boolean; as?: "h2" | "h3" }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-white/25">
       <Link href={`/blog/${p.slug}`} className="flex h-full flex-col" aria-label={p.title}>
@@ -16,7 +16,7 @@ export function BlogCard({ post: p, priority = false }: { post: Post; priority?:
             <span aria-hidden="true">·</span>
             <time dateTime={p.date}>{fmtDate(p.date)}</time>
           </p>
-          <h3 className="mt-3 font-display text-xl font-semibold leading-snug text-white">{p.title}</h3>
+          <H className="mt-3 font-display text-xl font-semibold leading-snug text-white">{p.title}</H>
           <p className="mt-2 text-sm leading-relaxed text-slate-400">{p.excerpt}</p>
           <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-medium text-white">
             Leer artículo <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />

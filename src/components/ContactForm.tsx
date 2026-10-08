@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { Mail, MessageCircle } from "lucide-react";
+import { Mail, } from "lucide-react";
+import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
 import { PRODUCTS } from "@/lib/products";
 import { SITE, waLink } from "@/lib/site";
 
@@ -88,11 +89,12 @@ export function ContactForm() {
         <textarea name="mensaje" rows={5} placeholder="Medidas, cantidades, normas, fluido, presión, temperatura…" className={field} />
         {err("mensaje")}
       </label>
+      <p className="text-sm text-slate-300">Con “Enviar por email” se abre tu aplicación de correo con el mensaje listo para enviar a {SITE.email}. Con WhatsApp se abre un chat con nuestro equipo.</p>
       <div className="flex flex-col gap-3 sm:flex-row">
-        <button type="button" onClick={send("wa")} className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 font-medium text-ink-950 transition hover:brightness-110">
-          <MessageCircle className="h-4 w-4" /> Enviar por WhatsApp
+        <button type="button" onClick={send("wa")} className="btn btn-wa flex-1">
+          <WhatsAppGlyph className="h-5 w-5" /> Enviar por WhatsApp
         </button>
-        <button type="button" onClick={send("mail")} className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full border border-white/15 px-6 font-medium text-white transition hover:bg-white/5">
+        <button type="button" onClick={send("mail")} className="btn btn-outline flex-1">
           <Mail className="h-4 w-4" /> Enviar por email
         </button>
       </div>

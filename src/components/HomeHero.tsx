@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { m } from "framer-motion";
-import { ArrowRight, BookOpen, MessageCircle } from "lucide-react";
+import { ArrowRight, BookOpen, } from "lucide-react";
+import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
 import { HeroBackground } from "./HeroBackground";
 import { ProductShowcase } from "./ProductShowcase";
 import { WA_DEFAULT_MESSAGE, waLink } from "@/lib/site";
@@ -38,13 +39,13 @@ export function HomeHero() {
             href={waLink(WA_DEFAULT_MESSAGE)}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand to-brand-dark px-7 font-medium text-white shadow-glow transition hover:brightness-110"
+            className="btn btn-primary group"
           >
-            <MessageCircle className="h-4 w-4" /> Solicitar cotización
+            <WhatsAppGlyph className="h-5 w-5" /> Solicitar cotización
             <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
           </a>
-          <Link href="/productos" className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 font-medium text-white backdrop-blur-xl transition hover:bg-white/10">
-            <BookOpen className="h-4 w-4" /> Ver productos
+          <Link href="/productos" className="btn btn-outline">
+            Ver productos <ArrowRight className="h-5 w-5" />
           </Link>
         </m.div>
         </div>

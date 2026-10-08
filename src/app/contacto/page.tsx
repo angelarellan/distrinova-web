@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function ContactoPage() {
   return (
     <>
-      <PageHero eyebrow="Contacto" title="Hablemos de tu próximo pedido" text="Contanos qué necesitás y te respondemos con ficha técnica y disponibilidad." crumbs={[{ label: "Contacto" }]} />
+      <PageHero eyebrow="Contacto" title="Hablemos de tu próximo pedido" text="Contanos qué necesitás y te respondemos con ficha técnica y disponibilidad." art={{ src: "/showcase/valvula-mariposa.webp", w: 900, h: 612 }} crumbs={[{ label: "Contacto" }]} />
       <section className="bg-ink-950 py-16 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-5 lg:gap-14 lg:px-8">
           <Reveal className="space-y-4 lg:col-span-2">

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FileDown, MessageCircle } from "lucide-react";
+import { FileDown, } from "lucide-react";
+import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
 import { Reveal } from "./Reveal";
 import { SITE, WA_DEFAULT_MESSAGE, waLink } from "@/lib/site";
 
@@ -16,10 +17,10 @@ export function CtaBand({ title = "¿Necesitás cotizar un insumo?", text = "Con
                 <p className="mt-3 text-blue-50/90">{text}</p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <a href={waLink(WA_DEFAULT_MESSAGE)} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white px-7 font-semibold text-brand-dark transition hover:bg-blue-50">
-                  <MessageCircle className="h-4 w-4" /> Escribinos por WhatsApp
+                <a href={waLink(WA_DEFAULT_MESSAGE)} target="_blank" rel="noopener noreferrer" className="btn btn-light">
+                  <WhatsAppGlyph className="h-5 w-5" /> Escribinos por WhatsApp
                 </a>
-                <Link href={SITE.catalogPdf} target="_blank" className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/40 px-7 font-medium text-white transition hover:bg-white/10">
+                <Link href={SITE.catalogPdf} target="_blank" className="btn btn-outline">
                   <FileDown className="h-4 w-4" /> Catálogo PDF
                 </Link>
               </div>

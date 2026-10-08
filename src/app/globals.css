@@ -106,3 +106,56 @@
     animation: none;
   }
 }
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-7 py-2 text-center text-base font-semibold leading-tight transition;
+  }
+  .btn-primary {
+    @apply bg-brand text-white shadow-glow hover:bg-brand-dark;
+  }
+  .btn-outline {
+    @apply border border-white/25 text-white hover:bg-white/10;
+  }
+  .btn-light {
+    @apply bg-white text-brand-dark hover:bg-blue-50;
+  }
+  .btn-wa {
+    @apply bg-[#25D366] text-ink-950 hover:brightness-110;
+  }
+  .btn-wa-soft {
+    @apply border border-[#25D366]/50 bg-[#25D366]/10 text-[#4ADE80] hover:bg-[#25D366]/20;
+  }
+}
+
+.ph-float {
+  animation: ph-float 7s ease-in-out infinite;
+}
+@keyframes ph-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ph-float {
+    animation: none;
+  }
+}
+
+.ph-in {
+  animation: ph-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes ph-in {
+  from {
+    transform: translateY(16px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ph-in {
+    animation: none;
+  }
+}

@@ -35,7 +35,7 @@ export function ProductExplorer() {
             aria-pressed={filter === f.key}
             className={cn("rounded-full border px-4 py-1.5 text-sm transition", filter === f.key ? "border-brand bg-brand/20 text-white" : "border-white/10 text-slate-400 hover:text-white")}
           >
-            {f.label}
+            {f.label} <span className="ml-1 text-slate-300">({f.key === "all" ? PRODUCTS.length : PRODUCTS.filter((p) => p.category === f.key).length})</span>
           </button>
         ))}
       </div>

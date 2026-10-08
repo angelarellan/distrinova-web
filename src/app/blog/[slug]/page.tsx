@@ -14,19 +14,21 @@ export function generateStaticParams() {
   return POSTS.map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const p = POSTS.find((x) => x.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const p = POSTS.find((x) => x.slug === slug);
   if (!p) return {};
   return {
-    title: p.title,
+    title: p.title.split(":")[0],
     description: p.excerpt,
     alternates: { canonical: `/blog/${p.slug}` },
     openGraph: { type: "article", title: p.title, description: p.excerpt, publishedTime: p.date, images: [p.image] },
   };
 }
 
-export default function PostPage({ params }: { params: { slug: string } }) {
-  const post = POSTS.find((x) => x.slug === params.slug);
+export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = POSTS.find((x) => x.slug === slug);
   if (!post) notFound();
   const products = post.productIds.map((id) => PRODUCTS.find((p) => p.id === id)).filter((p): p is NonNullable<typeof p> => !!p);
   const more = POSTS.filter((x) => x.slug !== post.slug).slice(0, 3);
@@ -88,7 +90,6 @@ export default function PostPage({ params }: { params: { slug: string } }) {
                 ),
               )}
             </div>
-            <p className="mt-10 border-t border-white/10 pt-4 text-xs text-slate-400">Fotografía: Unsplash. Datos de producto según Catálogo Distrinova Oil &amp; Gas 2026.</p>
           </div>
         </div>
       </article>

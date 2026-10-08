@@ -14,17 +14,16 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <PageHero eyebrow="Blog" title="Guías técnicas para elegir mejor" text="Criterios de selección, normas y buenas prácticas sobre sellado, válvulas y cañería industrial." crumbs={[{ label: "Blog" }]} />
+      <PageHero eyebrow="Blog" title="Guías técnicas para elegir mejor" text="Criterios de selección, normas y buenas prácticas sobre sellado, válvulas y cañería industrial." art={{ src: "/showcase/valvula-esferica-3c-inox.webp", w: 900, h: 635 }} crumbs={[{ label: "Blog" }]} />
       <section className="bg-ink-950 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Stagger className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {POSTS.map((p, i) => (
               <StaggerItem key={p.slug} className="h-full">
-                <BlogCard post={p} priority={i < 3} />
+                <BlogCard post={p} priority={i < 3} as="h2" />
               </StaggerItem>
             ))}
           </Stagger>
-          <p className="mt-10 text-xs text-slate-400">Fotografías: Unsplash.</p>
         </div>
       </section>
       <CtaBand />

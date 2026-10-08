@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Check, FileDown, MessageCircle } from "lucide-react";
+import { ArrowLeft, Check, FileDown, } from "lucide-react";
+import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
 import { PageHero } from "@/components/PageHero";
 import { ProductImage } from "@/components/ProductImage";
 import { ProductCard } from "@/components/ProductCard";
@@ -14,8 +15,9 @@ export function generateStaticParams() {
   return PRODUCTS.map((p) => ({ id: p.id }));
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const p = PRODUCTS.find((x) => x.id === params.id);
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const p = PRODUCTS.find((x) => x.id === id);
   if (!p) return {};
   return {
     title: p.name,
@@ -25,8 +27,9 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-  const p = PRODUCTS.find((x) => x.id === params.id);
+export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const p = PRODUCTS.find((x) => x.id === id);
   if (!p) notFound();
   const related = PRODUCTS.filter((x) => x.group === p.group && x.id !== p.id).concat(PRODUCTS.filter((x) => x.category === p.category && x.group !== p.group)).slice(0, 3);
   const jsonLd = {
@@ -42,7 +45,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
-      <PageHero eyebrow={`${CATEGORY_LABEL[p.category]} · ${p.group}`} title={p.name} text={p.subtitle} crumbs={[{ label: "Productos", href: "/productos" }, { label: p.name }]} />
+      <PageHero eyebrow={`${CATEGORY_LABEL[p.category]} · ${p.group}`} title={p.name} text={p.subtitle} crumbs={[{ label: "Productos", href: "/productos" }, { label: p.name }]} actions={<Link href="/productos" className="btn btn-outline"><ArrowLeft className="h-5 w-5" /> Volver a todos los productos</Link>} />
 
       <section className="bg-ink-950 py-16 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-5 lg:gap-14 lg:px-8">
@@ -53,17 +56,16 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   <ProductImage product={p} sizes="(min-width:1024px) 40vw, 100vw" priority />
                 </div>
               )}
-              {p.imageNote && <p className="mt-2 text-xs text-slate-400">{p.imageNote}</p>}
               <div className="mt-6 flex flex-col gap-3">
                 <a
                   href={waLink(`Hola Distrinova S.R.L., quisiera consultar por el producto: ${p.name}.`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 font-medium text-ink-950 transition hover:brightness-110"
+                  className="btn btn-wa"
                 >
-                  <MessageCircle className="h-4 w-4" /> Consultar por WhatsApp este Producto
+                  <WhatsAppGlyph className="h-5 w-5" /> Consultar por WhatsApp este Producto
                 </a>
-                <a href={SITE.catalogPdf} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/15 px-6 text-slate-200 transition hover:bg-white/5">
+                <a href={SITE.catalogPdf} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
                   <FileDown className="h-4 w-4" /> Ver catálogo PDF
                 </a>
               </div>
