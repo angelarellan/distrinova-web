@@ -3,7 +3,6 @@ import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
-import { Icon3D, type Icon3DName } from "@/components/Icon3D";
 import { ParallaxPhoto } from "@/components/ParallaxPhoto";
 import { StatsBand } from "@/components/StatsBand";
 import { CtaBand } from "@/components/CtaBand";
@@ -15,11 +14,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/nosotros" },
 };
 
-const PILLARS: { icon: Icon3DName; title: string; text: string }[] = [
-  { icon: "factory", title: "Foco industrial", text: "Insumos pensados para operaciones donde la continuidad importa: sellado, válvulas y accesorios de cañería." },
-  { icon: "search", title: "Información técnica clara", text: "Cada producto tiene su ficha con materiales, normas, presión, temperatura y dimensiones, para decidir con datos." },
-  { icon: "chains", title: "Línea integrada", text: "Varias familias de producto reunidas para que tu equipo de compras resuelva más con un solo proveedor." },
-  { icon: "phone", title: "Trato directo", text: "Atención directa por WhatsApp y correo para cotizar, consultar medidas o confirmar disponibilidad." },
+const PILLARS: { title: string; text: string }[] = [
+  { title: "Foco industrial", text: "Insumos pensados para operaciones donde la continuidad importa: sellado, válvulas y accesorios de cañería." },
+  { title: "Información técnica clara", text: "Cada producto tiene su ficha con materiales, normas, presión, temperatura y dimensiones, para decidir con datos." },
+  { title: "Línea integrada", text: "Varias familias de producto reunidas para que tu equipo de compras resuelva más con un solo proveedor." },
+  { title: "Trato directo", text: "Atención directa por WhatsApp y correo para cotizar, consultar medidas o confirmar disponibilidad." },
 ];
 
 const MILESTONES = [
@@ -108,7 +107,7 @@ export default function NosotrosPage() {
             {PILLARS.map((p) => (
               <StaggerItem key={p.title} className="h-full">
                 <div className="h-full rounded-2xl border border-white/10 bg-ink-950 p-6">
-                  <Icon3D name={p.icon} />
+                  <span className="block h-1 w-10 rounded-full bg-gradient-to-r from-accent-cyan to-brand" aria-hidden="true" />
                   <h3 className="mt-5 font-display text-2xl font-bold text-white">{p.title}</h3>
                   <p className="mt-2 leading-relaxed text-slate-300">{p.text}</p>
                 </div>

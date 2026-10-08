@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { Mail, } from "lucide-react";
 import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
-import Image from "next/image";
 import { Logo } from "./Logo";
+import { IsoSeal } from "./IsoSeal";
 import { CERTIFICATIONS } from "@/lib/certifications";
 import { MAIN_NAV, SITE, WA_DEFAULT_MESSAGE, waLink } from "@/lib/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
-  const certs = CERTIFICATIONS;
+  const cert = CERTIFICATIONS[0];
   return (
     <footer className="relative border-t border-white/10 bg-ink-950 pt-20">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 pb-14 sm:px-6 md:grid-cols-5 lg:px-8">
@@ -54,31 +54,20 @@ export function Footer() {
               </a>
             </li>
           </ul>
+
+          {cert && (
+            <div className="mt-8 flex items-center gap-4 rounded-2xl border border-white/15 bg-ink-900 p-4">
+              <IsoSeal className="h-16 w-16 shrink-0" />
+              <div>
+                <span className="block font-semibold text-white">{cert.name}</span>
+                <span className="block text-sm text-slate-300">{cert.scope}</span>
+                {cert.status === "en-proceso" && <span className="mt-1.5 inline-block rounded-full border border-accent-cyan/40 bg-accent-cyan/10 px-2.5 py-0.5 text-[11px] font-semibold text-accent-cyan">Certificación en proceso</span>}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
-      {certs.length > 0 && (
-        <div className="border-t border-white/10">
-          <ul className="mx-auto flex max-w-7xl flex-wrap items-center gap-4 px-4 py-6 sm:px-6 lg:px-8" aria-label="Certificaciones">
-            {certs.map((c) => (
-              <li key={c.name} className="flex items-center gap-4 rounded-xl border border-white/15 bg-ink-900 py-3 pl-3 pr-5">
-                <span className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-brand bg-ink-950 text-center font-display leading-none text-white">
-                  <span className="absolute inset-1 rounded-full border border-dashed border-white/25" aria-hidden="true" />
-                  <span className="relative">
-                    <span className="block text-sm font-extrabold">ISO</span>
-                    <span className="block text-[9px] font-semibold text-accent-cyan">{c.name.replace("ISO ", "").split(":")[0]}</span>
-                  </span>
-                </span>
-                <span>
-                  <span className="block font-semibold text-white">{c.name}</span>
-                  <span className="block text-sm text-slate-300">{c.scope}</span>
-                  {c.status === "en-proceso" && <span className="mt-1 inline-block rounded-full border border-accent-cyan/40 bg-accent-cyan/10 px-2.5 py-0.5 text-[11px] font-semibold text-accent-cyan">Certificación en proceso</span>}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-slate-400 sm:flex-row sm:px-6 lg:px-8">
           <p>

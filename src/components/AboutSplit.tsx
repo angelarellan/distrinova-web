@@ -2,13 +2,12 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
 import { ParallaxPhoto } from "./ParallaxPhoto";
-import { Icon3D, type Icon3DName } from "./Icon3D";
 import { SectionHeading } from "./SectionHeading";
 
-const DOES: { icon: Icon3DName; t: string; d: string }[] = [
-  { icon: "truck", t: "Distribuimos", d: "Sellado industrial, válvulas y accesorios de cañería para operaciones de Oil & Gas." },
-  { icon: "tools", t: "Asesoramos", d: "Te ayudamos a elegir según fluido, presión, temperatura y norma aplicable." },
-  { icon: "stopwatch", t: "Cotizamos rápido", d: "Atención directa para paradas de planta y mantenimiento programado." },
+const DOES: { t: string; d: string }[] = [
+  { t: "Distribuimos", d: "Sellado industrial, válvulas y accesorios de cañería para operaciones de Oil & Gas." },
+  { t: "Asesoramos", d: "Te ayudamos a elegir según fluido, presión, temperatura y norma aplicable." },
+  { t: "Cotizamos rápido", d: "Atención directa para paradas de planta y mantenimiento programado." },
 ];
 
 export function AboutSplit() {
@@ -35,12 +34,10 @@ export function AboutSplit() {
         <Stagger className="mt-14 grid gap-4 md:grid-cols-3">
           {DOES.map((d) => (
             <StaggerItem key={d.t} className="h-full">
-              <div className="flex h-full items-start gap-5 rounded-2xl border border-white/10 bg-ink-950 p-6">
-                <Icon3D name={d.icon} />
-                <div>
-                  <h3 className="font-display text-2xl font-bold text-white">{d.t}</h3>
-                  <p className="mt-1.5 text-slate-300">{d.d}</p>
-                </div>
+              <div className="h-full rounded-2xl border border-white/10 bg-ink-950 p-6">
+                <span className="block h-1 w-10 rounded-full bg-gradient-to-r from-accent-cyan to-brand" aria-hidden="true" />
+                <h3 className="mt-5 font-display text-2xl font-bold text-white">{d.t}</h3>
+                <p className="mt-1.5 text-slate-300">{d.d}</p>
               </div>
             </StaggerItem>
           ))}

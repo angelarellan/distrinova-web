@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { Icon3D, type Icon3DName } from "./Icon3D";
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
-const ITEMS: { icon: Icon3DName; title: string; text: string }[] = [
-  { icon: "clipboard", title: "Fichas técnicas completas", text: "Materiales, normas, presión, temperatura y dimensiones de cada producto, en la web y en el catálogo." },
-  { icon: "package", title: "Una sola fuente", text: "Sellado, válvulas y cañería con un solo proveedor para simplificar compras y mantenimiento." },
-  { icon: "tools", title: "Asesoramiento técnico", text: "Te ayudamos a elegir según fluido, presión, temperatura y condiciones de servicio." },
-  { icon: "shield", title: "Materiales según aplicación", text: "Acero al carbono, AISI 316, hierro dúctil, PTFE y grafito para cada exigencia." },
+const ITEMS: { title: string; text: string }[] = [
+  { title: "Fichas técnicas completas", text: "Materiales, normas, presión, temperatura y dimensiones de cada producto, en la web y en el catálogo." },
+  { title: "Una sola fuente", text: "Sellado, válvulas y cañería con un solo proveedor para simplificar compras y mantenimiento." },
+  { title: "Asesoramiento técnico", text: "Te ayudamos a elegir según fluido, presión, temperatura y condiciones de servicio." },
+  { title: "Materiales según aplicación", text: "Acero al carbono, AISI 316, hierro dúctil, PTFE y grafito para cada exigencia." },
 ];
 
 export function Benefits() {
@@ -27,7 +26,7 @@ export function Benefits() {
           {ITEMS.map((b) => (
             <StaggerItem key={b.title} className="h-full">
               <div className="h-full rounded-2xl border border-white/10 bg-ink-900 p-6 transition hover:border-accent-cyan/30">
-                <Icon3D name={b.icon} />
+                <span className="block h-1 w-10 rounded-full bg-gradient-to-r from-accent-cyan to-brand" aria-hidden="true" />
                 <h3 className="mt-5 font-display text-2xl font-bold text-white">{b.title}</h3>
                 <p className="mt-2 leading-relaxed text-slate-300">{b.text}</p>
               </div>
