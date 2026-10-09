@@ -98,10 +98,30 @@
 
 /* Blueprint del hero: flujo, nodos y flotación (SVG + CSS puro). */
 .bp-svg {
-  animation: bp-in 0.9s ease-out both, hero-piece-float 9s ease-in-out infinite 0.9s;
+  animation: bp-in 0.9s ease-out both, bp-float 9s ease-in-out infinite 0.9s;
 }
 .bp-svg * {
   vector-effect: non-scaling-stroke;
+}
+@keyframes bp-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+/* Ruedas de las válvulas que giran */
+.bp-wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bp-spin 16s linear infinite;
+}
+@keyframes bp-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 @keyframes bp-in {
   from {
@@ -142,7 +162,8 @@
 @media (prefers-reduced-motion: reduce) {
   .bp-svg,
   .bp-flow,
-  .bp-node {
+  .bp-node,
+  .bp-wheel {
     animation: none;
   }
   .bp-flow {

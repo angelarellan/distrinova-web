@@ -21,13 +21,13 @@ const INNER = `
 <g class="bp-valve" stroke="#60A5FA" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="M 229,287 L 251,313 L 251,287 L 229,313 Z"/>
 <line x1="240" y1="287" x2="240" y2="262"/>
-<circle cx="240" cy="246" r="22"/><circle cx="240" cy="246" r="19" stroke-opacity="0.5"/><circle cx="240" cy="246" r="3.2"/><line x1="218" y1="246" x2="262" y2="246"/><line x1="229" y1="226.9" x2="251" y2="265.1"/><line x1="251" y1="226.9" x2="229" y2="265.1"/>
+<g class="bp-wheel" style="animation-duration:15s"><circle cx="240" cy="246" r="22"/><circle cx="240" cy="246" r="19" stroke-opacity="0.5"/><circle cx="240" cy="246" r="3.2"/><line x1="218" y1="246" x2="262" y2="246"/><line x1="229" y1="226.9" x2="251" y2="265.1"/><line x1="251" y1="226.9" x2="229" y2="265.1"/></g>
 <path d="M 127,199 L 153,221 L 153,199 L 127,221 Z"/>
 <line x1="127" y1="210" x2="104" y2="210"/>
-<circle cx="88" cy="210" r="18"/><circle cx="88" cy="210" r="15" stroke-opacity="0.5"/><circle cx="88" cy="210" r="3.2"/><line x1="70" y1="210" x2="106" y2="210"/><line x1="79" y1="194.4" x2="97" y2="225.6"/><line x1="97" y1="194.4" x2="79" y2="225.6"/>
+<g class="bp-wheel" style="animation-duration:20s;animation-direction:reverse"><circle cx="88" cy="210" r="18"/><circle cx="88" cy="210" r="15" stroke-opacity="0.5"/><circle cx="88" cy="210" r="3.2"/><line x1="70" y1="210" x2="106" y2="210"/><line x1="79" y1="194.4" x2="97" y2="225.6"/><line x1="97" y1="194.4" x2="79" y2="225.6"/></g>
 <path d="M 327,199 L 353,221 L 353,199 L 327,221 Z"/>
 <line x1="353" y1="210" x2="376" y2="210"/>
-<circle cx="392" cy="210" r="18"/><circle cx="392" cy="210" r="15" stroke-opacity="0.5"/><circle cx="392" cy="210" r="3.2"/><line x1="374" y1="210" x2="410" y2="210"/><line x1="383" y1="194.4" x2="401" y2="225.6"/><line x1="401" y1="194.4" x2="383" y2="225.6"/>
+<g class="bp-wheel" style="animation-duration:18s"><circle cx="392" cy="210" r="18"/><circle cx="392" cy="210" r="15" stroke-opacity="0.5"/><circle cx="392" cy="210" r="3.2"/><line x1="374" y1="210" x2="410" y2="210"/><line x1="383" y1="194.4" x2="401" y2="225.6"/><line x1="401" y1="194.4" x2="383" y2="225.6"/></g>
 </g>
 <g stroke="#38BDF8" stroke-opacity="0.8" stroke-width="2" fill="none">
 <line x1="80" y1="286" x2="80" y2="314"/><line x1="86" y1="286" x2="86" y2="314"/>
