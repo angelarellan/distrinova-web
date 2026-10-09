@@ -7,13 +7,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
 import { IndustryCard } from "@/components/IndustryCard";
 import { CategoryTiles } from "@/components/CategoryTiles";
-import { BlogCard } from "@/components/BlogCard";
 import { BrandsStrip } from "@/components/BrandsStrip";
 import { Benefits } from "@/components/Benefits";
 import { Marquee } from "@/components/Marquee";
 import { CtaBand } from "@/components/CtaBand";
 import { INDUSTRIES } from "@/lib/industries";
-import { POSTS } from "@/lib/blog";
 import { BRANDS } from "@/lib/brands";
 
 const NORMS = ["ASME B16.5", "ASME B16.20", "DIN 2605", "DIN 2615", "DIN 2616", "DIN 2617", "JIS B2311", "EN 593", "PTFE", "AISI 316", "EPDM", "FDA"];
@@ -79,26 +77,6 @@ export default function Home() {
           </div>
         </section>
       )}
-
-      <section className="bg-ink-900 py-24 sm:py-32" aria-label="Blog">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-            <SectionHeading eyebrow="Blog" title="Guías técnicas para elegir mejor" />
-            <Reveal>
-              <Link href="/blog" className={link}>
-                Ver todos los artículos <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Reveal>
-          </div>
-          <Stagger className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {POSTS.slice(0, 3).map((p) => (
-              <StaggerItem key={p.slug} className="h-full">
-                <BlogCard post={p} />
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </section>
 
       <CtaBand />
     </>
