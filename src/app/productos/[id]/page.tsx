@@ -5,6 +5,7 @@ import { ArrowLeft, Check, ChevronDown, FileDown, Mail } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { ProductImage } from "@/components/ProductImage";
 import { ProductCard } from "@/components/ProductCard";
+import { ScrollTable } from "@/components/ScrollTable";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
 import { CATEGORY_LABEL, PRODUCTS } from "@/lib/products";
@@ -115,13 +116,13 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                   {t.title}
                   <ChevronDown className="acc-chevron h-5 w-5 shrink-0 text-accent-cyan" aria-hidden="true" />
                 </summary>
-                <div className="border-t border-white/10">
-                  <div className="hscroll overflow-x-auto">
+                <div className="border-t border-white/10 px-5 py-4">
+                  <ScrollTable>
                     <table className="w-full min-w-max text-left text-sm">
                       <thead className="bg-brand/20 text-slate-200">
                         <tr>
                           {t.head.map((h) => (
-                            <th key={h} scope="col" className="px-3 py-2.5 font-medium">
+                            <th key={h} scope="col" className="whitespace-nowrap px-3 py-2.5 font-medium">
                               {h}
                             </th>
                           ))}
@@ -131,7 +132,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                         {t.rows.map((r, i) => (
                           <tr key={i} className="hover:bg-white/[0.03]">
                             {r.map((c, j) => (
-                              <td key={j} className={j === 0 ? "px-3 py-2 font-medium text-white" : "px-3 py-2"}>
+                              <td key={j} className={j === 0 ? "whitespace-nowrap px-3 py-2 font-medium text-white" : "whitespace-nowrap px-3 py-2"}>
                                 {c}
                               </td>
                             ))}
@@ -139,8 +140,8 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                         ))}
                       </tbody>
                     </table>
-                  </div>
-                  {t.note && <p className="px-5 py-3 text-xs text-slate-400">{t.note}</p>}
+                  </ScrollTable>
+                  {t.note && <p className="pt-3 text-xs text-slate-400">{t.note}</p>}
                 </div>
               </details>
             ))}
