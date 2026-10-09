@@ -96,6 +96,60 @@
   }
 }
 
+/* Blueprint del hero: flujo, nodos y flotación (SVG + CSS puro). */
+.bp-svg {
+  animation: bp-in 0.9s ease-out both, hero-piece-float 9s ease-in-out infinite 0.9s;
+}
+.bp-svg * {
+  vector-effect: non-scaling-stroke;
+}
+@keyframes bp-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+.bp-flow {
+  stroke-dasharray: 22 620;
+  animation: bp-flow 4.5s linear infinite;
+}
+.bp-flow-2 {
+  animation-duration: 6s;
+  animation-delay: -1.2s;
+}
+@keyframes bp-flow {
+  from {
+    stroke-dashoffset: 642;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.bp-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bp-node 2.8s ease-in-out infinite;
+}
+@keyframes bp-node {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bp-svg,
+  .bp-flow,
+  .bp-node {
+    animation: none;
+  }
+  .bp-flow {
+    stroke-dasharray: none;
+  }
+}
+
 /* Pieza del hero: solo transform/opacity. */
 .hero-piece-float {
   animation: hero-piece-float 8s ease-in-out infinite;

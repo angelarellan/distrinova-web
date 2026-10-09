@@ -1,20 +1,20 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { ReactNode } from "react";
 import { ChevronRight } from "lucide-react";
 import { HeroField } from "./HeroField";
+import { BlueprintHero } from "./BlueprintHero";
 
 interface Props {
   eyebrow: string;
   title: string;
   text?: string;
   crumbs: { label: string; href?: string }[];
-  /** Pieza de producto recortada que flota dentro del anillo técnico (decorativa). */
+  /** Obsoleto: antes era la pieza de producto; ahora todos los heros usan el blueprint unificado. */
   art?: { src: string; w: number; h: number };
   actions?: ReactNode;
 }
 
-export function PageHero({ eyebrow, title, text, crumbs, art, actions }: Props) {
+export function PageHero({ eyebrow, title, text, crumbs, actions }: Props) {
   return (
     <section className="relative isolate overflow-hidden border-b border-white/10 bg-ink-950 pb-16 pt-32 sm:pb-24 sm:pt-40">
       <HeroField variant="page" />
@@ -44,14 +44,9 @@ export function PageHero({ eyebrow, title, text, crumbs, art, actions }: Props) 
             {actions && <div className="mt-8 flex flex-col gap-3 sm:flex-row">{actions}</div>}
           </div>
         </div>
-        {art && (
-          <div className="relative mx-auto hidden aspect-square w-full max-w-sm lg:block" aria-hidden="true">
-            <div className="absolute inset-[6%] rounded-full bg-[radial-gradient(circle,rgba(11,95,208,0.45),transparent_70%)]" />
-            <div className="ph-float absolute inset-[12%] flex items-center justify-center">
-              <Image src={art.src} alt="" width={art.w} height={art.h} sizes="320px" className="h-auto max-h-full w-full object-contain drop-shadow-[0_24px_24px_rgba(0,0,0,0.5)]" />
-            </div>
-          </div>
-        )}
+        <div className="hidden lg:block">
+          <BlueprintHero className="max-w-md" />
+        </div>
       </div>
     </section>
   );

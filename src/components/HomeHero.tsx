@@ -4,7 +4,7 @@ import Link from "next/link";
 import { m } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { HeroField } from "./HeroField";
-import { HeroPiece } from "./HeroPiece";
+import { BlueprintHero } from "./BlueprintHero";
 import { easeOut } from "@/lib/motion";
 
 export function HomeHero() {
@@ -43,7 +43,7 @@ export function HomeHero() {
         </m.div>
         </div>
         <div className="mx-auto w-full min-w-0 lg:max-w-none">
-          <HeroPiece />
+          <BlueprintHero />
         </div>
       </div>
     </section>
