@@ -56,7 +56,7 @@ export function Footer() {
           </ul>
 
           {cert && (
-            <div className="mt-8 flex items-center gap-4 rounded-2xl border border-white/15 bg-ink-900 p-4">
+            <div className="mt-8 flex w-fit max-w-full items-center gap-4 rounded-2xl border border-white/15 bg-ink-900 p-4">
               <IsoSeal className="h-16 w-16 shrink-0" />
               <div>
                 <span className="block font-semibold text-white">{cert.name}</span>

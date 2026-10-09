@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
 import { ParallaxPhoto } from "@/components/ParallaxPhoto";
 import { StatsBand } from "@/components/StatsBand";
+import { HistoryTimeline } from "@/components/HistoryTimeline";
 import { CtaBand } from "@/components/CtaBand";
 import { BRANDS } from "@/lib/brands";
 
@@ -67,18 +68,7 @@ export default function NosotrosPage() {
           <div className="lg:col-span-2">
             <SectionHeading eyebrow="Nuestra historia" title="Cómo llegamos hasta acá" text="Del alumbrado público a los insumos Oil & Gas: más de diez años de trabajo junto a la industria." />
           </div>
-          <ol className="relative space-y-10 border-l border-white/15 pl-8 lg:col-span-3">
-            {MILESTONES.map((m) => (
-              <li key={m.title} className="relative">
-                <span className="absolute -left-[2.45rem] top-1.5 h-3 w-3 rounded-full border-2 border-brand bg-ink-900" aria-hidden="true" />
-                <Reveal>
-                  <p className="font-display text-xl font-semibold text-accent-cyan">{m.when}</p>
-                  <h3 className="mt-1 font-display text-2xl font-semibold text-white">{m.title}</h3>
-                  <p className="mt-2 text-slate-400">{m.text}</p>
-                </Reveal>
-              </li>
-            ))}
-          </ol>
+          <HistoryTimeline milestones={MILESTONES} />
         </div>
       </section>
 

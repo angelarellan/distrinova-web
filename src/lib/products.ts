@@ -99,8 +99,7 @@ const CATALOG: Omit<Product, "brand">[] = [
     subtitle: "Hilos de algodón lubricado y grafitado",
     category: "sellado",
     group: "Empaquetaduras trenzadas",
-    image: "/products/empaquetadura-grafitada.jpg",
-    imageFit: "cover",
+    image: "/products/empaquetadura-grafitada.webp",
     description:
       "Uso general en bombas centrífugas con condiciones poco exigentes de temperatura y presión. Ideal para agua dulce, caliente o fría, agua salada pura o contaminada, y válvulas de baja presión. Reemplaza los usos más comunes del antiguo amianto grafitado, a menor temperatura.",
     highlights: [
@@ -131,8 +130,7 @@ const CATALOG: Omit<Product, "brand">[] = [
     subtitle: "Filamentos de grafito expandido",
     category: "sellado",
     group: "Empaquetaduras trenzadas",
-    image: "/products/empaquetadura-grafito-puro.jpg",
-    imageFit: "cover",
+    image: "/products/empaquetadura-grafito-puro.webp",
     description:
       "Para bombas centrífugas con fluidos limpios y mínimo goteo: combustibles, solventes, aceites o lubricantes, incluso a elevadas temperaturas como en sistemas de transmisión de calor. También en válvulas de vapor e hidrocarburos, gases y productos químicos.",
     highlights: [

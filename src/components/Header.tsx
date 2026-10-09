@@ -52,7 +52,16 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-8">
-        <Link href="/" aria-label="Distrinova S.R.L. — Inicio">
+        <Link
+          href="/"
+          aria-label="Distrinova S.R.L. — Inicio"
+          onClick={(e) => {
+            if (pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+        >
           <Logo />
         </Link>
 
