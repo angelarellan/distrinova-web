@@ -29,6 +29,7 @@ export function ProductImage({ product, sizes, priority, parallax, className }: 
       fill
       sizes={sizes}
       priority={priority}
+      fetchPriority={priority ? "high" : undefined}
       unoptimized={product.image.endsWith(".svg")}
       className={cn(cover ? "object-cover" : "object-contain p-3")}
     />

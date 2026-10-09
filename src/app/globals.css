@@ -94,6 +94,29 @@
   }
 }
 
+/* Accordion nativo (details/summary) */
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+.acc-chevron {
+  transition: transform 0.25s ease;
+}
+details[open] > summary .acc-chevron {
+  transform: rotate(180deg);
+}
+
+/* Carrusel horizontal con snap (ocultar scrollbar) */
+.hscroll {
+  scrollbar-width: none;
+}
+.hscroll::-webkit-scrollbar {
+  display: none;
+}
+
 .ph-float {
   animation: ph-float 7s ease-in-out infinite;
 }
