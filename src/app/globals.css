@@ -60,6 +60,38 @@
   }
 }
 
+/* Fondo del hero: aurora con deriva lenta (solo transform). */
+.aurora-a {
+  animation: aurora-a 24s ease-in-out infinite;
+}
+.aurora-b {
+  animation: aurora-b 30s ease-in-out infinite;
+}
+@keyframes aurora-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-40px, 26px, 0) scale(1.12);
+  }
+}
+@keyframes aurora-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(36px, -24px, 0) scale(1.1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aurora-a,
+  .aurora-b {
+    animation: none;
+  }
+}
+
 /* Pieza del hero: solo transform/opacity. */
 .hero-piece-float {
   animation: hero-piece-float 8s ease-in-out infinite;

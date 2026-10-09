@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { m } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { HeroBackground } from "./HeroBackground";
+import { HeroField } from "./HeroField";
 import { HeroPiece } from "./HeroPiece";
 import { easeOut } from "@/lib/motion";
 
@@ -16,12 +16,12 @@ export function HomeHero() {
 
   return (
     <section className="relative isolate flex min-h-[100svh] items-center overflow-x-clip pt-24 pb-12">
-      <HeroBackground />
+      <HeroField variant="home" />
       <div className="mx-auto grid w-full max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-6 lg:px-8">
         <div className="min-w-0">
         <m.p {...item(0)} className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">
           <span className="h-px w-10 bg-brand" aria-hidden="true" />
-          Petróleo · Gas · Sistemas de Incendio · Alimenticia
+          Petróleo · Gas · Sistemas de Incendio · Industria Alimenticia
         </m.p>
 
         <m.h1 {...item(1)} className="mt-6 max-w-3xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">

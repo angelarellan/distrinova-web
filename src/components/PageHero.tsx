@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { ChevronRight } from "lucide-react";
+import { HeroField } from "./HeroField";
 
 interface Props {
   eyebrow: string;
@@ -15,9 +16,8 @@ interface Props {
 
 export function PageHero({ eyebrow, title, text, crumbs, art, actions }: Props) {
   return (
-    <section className="relative overflow-hidden border-b border-white/10 bg-ink-950 pb-16 pt-32 sm:pb-24 sm:pt-40">
-      <div className="grid-tech absolute inset-0 [mask-image:radial-gradient(ellipse_at_80%_40%,black_10%,transparent_70%)]" aria-hidden="true" />
-      <div className="absolute -right-24 top-0 h-96 w-[30rem] rounded-full bg-brand/25 blur-[130px]" aria-hidden="true" />
+    <section className="relative isolate overflow-hidden border-b border-white/10 bg-ink-950 pb-16 pt-32 sm:pb-24 sm:pt-40">
+      <HeroField variant="page" />
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
         <div>
           <nav aria-label="Migas de pan" className="mb-6 flex flex-wrap items-center gap-1.5 text-sm text-slate-300">
