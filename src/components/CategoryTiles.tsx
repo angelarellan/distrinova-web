@@ -4,10 +4,20 @@ import { ArrowUpRight } from "lucide-react";
 import { Stagger, StaggerItem } from "./Reveal";
 import { CATEGORY_LABEL, PRODUCTS, type CategoryKey } from "@/lib/products";
 
-const TILES: { key: CategoryKey; text: string; ids: string[] }[] = [
-  { key: "sellado", text: "Empaquetaduras trenzadas, juntas espiraladas y cinta de PTFE para sellar ejes, vástagos y bridas.", ids: ["empaquetadura-grafito-puro", "junta-espiralada-cgi", "cinta-ptfe-expandido"] },
+const TILES: { key: CategoryKey; label?: string; text: string; ids: string[]; photos?: { src: string; alt: string }[] }[] = [
+  {
+    key: "canerias",
+    label: "Bridas y accesorios",
+    text: "Bridas, codos, tapas, tees y reducciones para soldar, de DN 15 a DN 1500, según normas DIN y JIS.",
+    ids: [],
+    photos: [
+      { src: "/photos/bridas-ladrillo.jpg", alt: "Bridas en una línea de cañería industrial" },
+      { src: "/photos/canerias-gris.jpg", alt: "Codos y bridas abulonadas" },
+      { src: "/photos/canerias-azul.jpg", alt: "Cañerías con bridas y accesorios" },
+    ],
+  },
   { key: "valvulas", text: "Válvulas esféricas 1000 WOG en acero e inoxidable y válvulas de mariposa wafer de hierro dúctil.", ids: ["valvula-esferica-3c-acero", "valvula-esferica-3c-inox", "valvula-mariposa"] },
-  { key: "canerias", text: "Codos, tapas, tees y reducciones para soldar, de DN 15 a DN 1500, según normas DIN y JIS.", ids: ["codos-y-tapas", "tees-y-reducciones"] },
+  { key: "sellado", text: "Empaquetaduras trenzadas, juntas espiraladas y cinta de PTFE para sellar ejes, vástagos y bridas.", ids: ["empaquetadura-grafito-puro", "junta-espiralada-cgi", "cinta-ptfe-expandido"] },
 ];
 
 export function CategoryTiles() {
@@ -19,6 +29,11 @@ export function CategoryTiles() {
           <StaggerItem key={t.key} className="h-full">
             <Link href={`/productos#${t.key}`} className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-white/25 sm:p-8">
               <div className="grid h-36 grid-cols-3 gap-2">
+                {t.photos?.map((ph) => (
+                  <div key={ph.src} className="relative overflow-hidden rounded-xl bg-white">
+                    <Image src={ph.src} alt={ph.alt} fill sizes="140px" className="object-cover" />
+                  </div>
+                ))}
                 {items.map((p) => (
                   <div key={p.id} className="relative overflow-hidden rounded-xl bg-white">
                     <Image src={p.image!} alt={p.name} fill sizes="140px" unoptimized={p.image!.endsWith(".svg")} className={p.imageFit === "cover" ? "object-cover" : "object-contain p-1.5"} />
@@ -26,7 +41,7 @@ export function CategoryTiles() {
                 ))}
               </div>
               <div className="mt-6 flex items-start justify-between gap-4">
-                <h3 className="font-display text-3xl font-semibold text-white lg:min-h-[4.5rem]">{CATEGORY_LABEL[t.key]}</h3>
+                <h3 className="font-display text-3xl font-semibold text-white lg:min-h-[4.5rem]">{t.label ?? CATEGORY_LABEL[t.key]}</h3>
                 <ArrowUpRight className="mt-1.5 h-5 w-5 shrink-0 text-slate-400 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" aria-hidden="true" />
               </div>
               <p className="mt-2 text-slate-400 lg:min-h-[4.5rem]">{t.text}</p>
