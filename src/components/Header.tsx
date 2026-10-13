@@ -62,7 +62,7 @@ export function Header() {
             }
           }}
         >
-          <Logo />
+          <Logo large />
         </Link>
 
         <nav aria-label="Principal" className="hidden items-center gap-6 xl:flex">

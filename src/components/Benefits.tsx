@@ -6,7 +6,7 @@ const ITEMS: { title: string; text: string }[] = [
   { title: "Fichas técnicas completas", text: "Materiales, normas, presión, temperatura y dimensiones de cada producto, en la web y en el catálogo." },
   { title: "Una sola fuente", text: "Cañerías, accesorios, válvulas, sellos y más en un solo proveedor para simplificar compras y mantenimiento." },
   { title: "Asesoramiento técnico", text: "Te ayudamos a elegir según fluido, presión, temperatura y condiciones de servicio." },
-  { title: "Materiales según aplicación", text: "Acero al carbono, AISI 316, hierro dúctil, PTFE y grafito para cada exigencia." },
+  { title: "Materiales según aplicación", text: "Acero al carbono, AISI 316, hierro dúctil, PTFE y grafito para cada exigencia, y más…" },
 ];
 
 export function Benefits() {
