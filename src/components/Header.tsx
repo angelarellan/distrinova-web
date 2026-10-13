@@ -54,7 +54,6 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-8">
         <Link
           href="/"
-          aria-label="Distrinova S.R.L. — Inicio"
           onClick={(e) => {
             if (pathname === "/") {
               e.preventDefault();
@@ -63,6 +62,7 @@ export function Header() {
           }}
         >
           <Logo large />
+          <span className="sr-only">Inicio</span>
         </Link>
 
         <nav aria-label="Principal" className="hidden items-center gap-6 xl:flex">

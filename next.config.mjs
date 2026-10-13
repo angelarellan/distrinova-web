@@ -46,7 +46,15 @@ const nextConfig = {
     imageSizes: [140, 300, 400, 640],
   },
   async headers() {
-    return [{ source: "/(.*)", headers: securityHeaders }];
+    return [
+      { source: "/(.*)", headers: securityHeaders },
+      // Archivos estáticos de /public: caché de 1 día + revalidación en segundo plano (los nombres cambian al reemplazar fotos).
+      {
+        source: "/:dir(photos|products|showcase|brands|icons)/:file*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
+      },
+      { source: "/logo-isotipo.svg", headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }] },
+    ];
   },
 };
 
