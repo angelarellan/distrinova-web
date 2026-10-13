@@ -34,8 +34,8 @@ export const INDUSTRIES: Industry[] = [
     specs: ["Mariposa wafer, hierro dúctil", "Asiento EPDM", "PN10 / PN16", "Diseño según EN 593", "Acoples ranurados", "Caños"],
     productIds: ["valvula-mariposa"],
     more: ["Acoples ranurados", "Caños"],
-    photo: "/photos/hidrante-valvula.jpg",
-    photoAlt: "Válvulas rojas de una red contra incendio sobre pared amarilla",
+    photo: "/photos/incendio-acoples-canos.jpg",
+    photoAlt: "Caños rojos ranurados para redes contra incendio sobre fondo amarillo",
   },
   {
     slug: "alimenticia",
