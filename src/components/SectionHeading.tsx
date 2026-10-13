@@ -11,7 +11,7 @@ export function SectionHeading({
   className,
 }: {
   eyebrow: string;
-  title: string;
+  title: React.ReactNode;
   text?: string;
   accent?: keyof typeof ACCENT;
   className?: string;

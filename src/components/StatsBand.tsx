@@ -12,7 +12,7 @@ const STATS = [
 /** Banda azul con bordes difuminados hacia el fondo oscuro (sin cortes duros). */
 export function StatsBand() {
   return (
-    <section className="relative overflow-hidden py-28 sm:py-36" aria-label="Cobertura técnica del catálogo">
+    <section className="relative overflow-hidden py-16 sm:py-24" aria-label="Cobertura técnica del catálogo">
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#10172A_0%,#15325F_50%,#10172A_100%)]" aria-hidden="true" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(30,99,214,0.14),transparent_65%)]" aria-hidden="true" />
       <div className="grid-tech absolute inset-0 opacity-30 [mask-image:linear-gradient(to_bottom,transparent,black_30%,black_70%,transparent)]" aria-hidden="true" />

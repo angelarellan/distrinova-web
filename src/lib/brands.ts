@@ -9,8 +9,9 @@ export interface Brand {
   line: string;
 }
 
-// Marcas que Distrinova importa. TODO(cliente): falta la tercera marca (soldaduras y alambres).
+// Marcas que Distrinova importa.
 export const BRANDS: Brand[] = [
   { name: "DNova", logo: "/brands/dnova.webp", w: 1182, h: 220, line: "Insumos para petróleo, gas e industrias: sellado industrial, válvulas y accesorios de cañería." },
   { name: "Fixy", logo: "/brands/fixy.webp", w: 226, h: 260, line: "Selladores, fijaciones, tornillería y bulonería para obra y mantenimiento." },
+  { name: "Hardweld", logo: "/brands/hardweld.webp", w: 1194, h: 257, line: "Electrodos y alambre para soldar, para instalaciones, mantenimiento y procesos industriales." },
 ];
