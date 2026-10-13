@@ -21,7 +21,7 @@ export function HomeHero() {
         <div className="min-w-0">
         <m.p {...item(0)} className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">
           <span className="h-px w-10 bg-brand" aria-hidden="true" />
-          Petróleo · Gas · Sistemas de Incendio · Industria Alimenticia
+          Petróleo · Gas · Sistemas de Incendio · Industria Alimenticia · Y más…
         </m.p>
 
         <m.h1 {...item(1)} className="mt-6 max-w-3xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
