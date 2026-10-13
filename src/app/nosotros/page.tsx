@@ -47,12 +47,14 @@ export default function NosotrosPage() {
       <section className="bg-ink-950 py-20 sm:py-28">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
           <div>
-            <SectionHeading eyebrow="Quiénes somos" title="Un proveedor que habla el idioma de planta" />
+            <SectionHeading eyebrow="Quiénes somos" title="DISTRINOVA SRL | Soluciones para la industria" />
             <Reveal delay={0.1}>
-              <p className="mt-6 text-lg leading-relaxed text-slate-300">
-                Trabajamos en el rubro industrial desde 2015 y hoy estamos especializados en insumos para el sector Oil &amp; Gas: empaquetaduras, juntas, cinta de PTFE, válvulas esféricas y de mariposa, y accesorios de cañería para soldar. Somos importadores de las marcas DNova y Fixy.
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-slate-300">Para nosotros la calidad es primordial: cada línea que incorporamos al catálogo tiene que estar a la altura de una planta que no puede parar. Y queremos que encuentres el insumo correcto, con la información técnica a mano, y que puedas cotizarlo rápido.</p>
+              <p className="mt-6 text-lg leading-relaxed text-slate-300">Desde 2015, nos dedicamos a la importación y comercialización de insumos industriales, con una sólida especialización en los sectores <strong className="font-semibold text-white">Oil &amp; Gas, petroquímico, energético y otras industrias.</strong></p>
+              <p className="mt-4 text-lg leading-relaxed text-slate-300">Ofrecemos una amplia gama de productos, entre los que se destacan <strong className="font-semibold text-white">bridas, accesorios para soldar, accesorios forjados, válvulas industriales, juntas y empaquetaduras</strong>, además de cintas de PTFE, selladores y otros insumos esenciales para instalaciones, mantenimiento y procesos industriales.</p>
+              <p className="mt-4 text-lg leading-relaxed text-slate-300">Somos importadores y comercializadores de nuestras marcas <strong className="font-semibold text-white">DNova , Fixy, Hardweld</strong>, desarrolladas bajo estrictos criterios de calidad, confiabilidad y competitividad.</p>
+              <p className="mt-4 text-lg leading-relaxed text-slate-300"><strong className="font-semibold text-white">Nuestro compromiso es brindar soluciones que estén a la altura de las exigencias de la industria</strong>, donde la seguridad, la eficiencia y la continuidad operativa son fundamentales.</p>
+              <p className="mt-4 text-lg leading-relaxed text-slate-300">Trabajamos para que cada cliente encuentre el producto adecuado para su aplicación, con asesoramiento técnico, información precisa, disponibilidad de stock y respuestas comerciales ágiles.</p>
+              <p className="mt-4 text-lg leading-relaxed text-slate-300">En <strong className="font-semibold text-white">DISTRINOVA SRL</strong>, entendemos que la calidad no es una opción, sino una condición indispensable para construir relaciones comerciales sólidas y duraderas.</p>
             </Reveal>
           </div>
           <Reveal>
