@@ -6,6 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { ProductCard } from "@/components/ProductCard";
 import { CtaBand } from "@/components/CtaBand";
 import { ArrowUpRight } from "lucide-react";
+import { IndustryArt } from "@/components/IndustryArt";
 import { INDUSTRIES } from "@/lib/industries";
 import { waLink } from "@/lib/site";
 import { PRODUCTS } from "@/lib/products";
@@ -49,11 +50,12 @@ export default function IndustriasPage() {
                 href={waLink(`Hola Distrinova S.R.L., quisiera consultar por otros insumos para ${ind.title}...`)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex min-h-[16rem] flex-col justify-center rounded-3xl border border-dashed border-white/20 bg-white/[0.02] p-8 transition hover:border-accent-cyan/50 hover:bg-white/[0.05]"
+                className="group relative isolate flex min-h-[16rem] flex-col justify-start overflow-hidden rounded-3xl border border-dashed border-white/20 bg-gradient-to-br from-brand-deep/40 via-ink-900 to-ink-950 p-8 transition hover:border-accent-cyan/50"
               >
-                <p className="font-display text-3xl font-semibold text-white">Y más…</p>
-                {ind.more.length > 0 && <p className="mt-3 text-slate-300">{ind.more.join(" · ")}</p>}
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent-cyan">
+                <IndustryArt slug={ind.slug} />
+                <p className="relative font-display text-3xl font-semibold text-white">Y más…</p>
+                {ind.more.length > 0 && <p className="relative mt-3 text-slate-300">{ind.more.join(" · ")}</p>}
+                <span className="relative mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent-cyan">
                   Consultá por otros insumos <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
                 </span>
               </a>
