@@ -11,9 +11,8 @@ const TILES: { key: CategoryKey; label?: string; text: string; ids: string[]; ph
     text: "Bridas, codos, tapas, tees y reducciones para soldar, de DN 15 a DN 1500, según normas DIN y JIS.",
     ids: [],
     photos: [
-      { src: "/photos/bridas-ladrillo.jpg", alt: "Bridas en una línea de cañería industrial" },
-      { src: "/photos/canerias-gris.jpg", alt: "Codos y bridas abulonadas" },
-      { src: "/photos/canerias-azul.jpg", alt: "Cañerías con bridas y accesorios" },
+      { src: "/products/bridas.webp", alt: "Bridas de acero: slip-on, welding neck, roscada y ciega" },
+      { src: "/products/accesorios-soldar.webp", alt: "Accesorios para soldar: codos, tee, reducciones y tapa" },
     ],
   },
   { key: "valvulas", text: "Válvulas esféricas 1000 WOG en acero e inoxidable y válvulas de mariposa wafer de hierro dúctil.", ids: ["valvula-esferica-3c-acero", "valvula-esferica-3c-inox", "valvula-mariposa"] },

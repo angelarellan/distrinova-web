@@ -481,7 +481,7 @@ const CATALOG: Omit<Product, "brand">[] = [
     subtitle: "Para soldar · DN 15 a DN 1200",
     category: "canerias",
     group: "Codos y tapas",
-    image: "/products/codos-y-tapas.svg",
+    image: "/products/accesorios-soldar.webp",
     description:
       "Codos de 45°, 90° y 180° y tapas para cañerías, fabricados según normas DIN. Tabla completa de dimensiones, pesos y tolerancias en el catálogo PDF.",
     highlights: [
@@ -521,7 +521,7 @@ const CATALOG: Omit<Product, "brand">[] = [
     subtitle: "Tee igual o reductora · Reductor concéntrico y excéntrico",
     category: "canerias",
     group: "Tees y reducciones",
-    image: "/products/tees-y-reducciones.svg",
+    image: "/products/accesorios-soldar.webp",
     description:
       "Tees (iguales o reductoras) y reductores concéntricos y excéntricos para cañerías. Tablas completas de diámetros, longitudes y pesos en el catálogo PDF.",
     highlights: [
