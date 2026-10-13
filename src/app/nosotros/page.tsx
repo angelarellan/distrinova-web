@@ -35,7 +35,7 @@ const MISSION_VISION = [
   },
   {
     label: "Visión",
-    text: "Ser la distribuidora de insumos industriales de referencia en Argentina y la región: la primera opción de los equipos de compras y mantenimiento que no resignan calidad, con marcas propias consolidadas y una gestión certificada bajo ISO 9001:2015.",
+    text: "Ser la distribuidora de insumos industriales de referencia en Argentina y la región: la primera opción de los equipos de compras y mantenimiento que no resignan calidad, con marcas propias consolidadas y una gestión de calidad en camino a la certificación ISO 9001:2015.",
   },
 ];
 
