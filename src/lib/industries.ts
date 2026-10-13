@@ -43,7 +43,7 @@ export const INDUSTRIES: Industry[] = [
     summary: "Materiales inertes y acero inoxidable para procesos que no deben contaminarse.",
     detail:
       "Donde el fluido no puede contaminarse, importan los materiales: PTFE inerte, acero inoxidable AISI 316 y sellos que no alteran el producto. Cinta de PTFE expandido compatible con requisitos FDA, empaquetadura Teflon bridas de acero inoxidable y válvulas esféricas en inoxidable.",
-    specs: ["Cinta PTFE compatible FDA", "Empaquetadura Teflon (pH 2–12)", "Válvulas esféricas AISI 316", "Bridas de acero inoxidable"],
+    specs: ["Cinta PTFE compatible FDA", "Empaquetadura Teflon (pH 2–12)", "Válvulas esféricas AISI 316", "Sellos de PTFE", "Bridas de acero inoxidable"],
     productIds: ["cinta-ptfe-expandido", "empaquetadura-teflon", "valvula-esferica-2c-inox", "valvula-esferica-3c-inox"],
     more: ["Bridas de acero inoxidable"],
     photo: "/photos/planta-inox.jpg",
