@@ -4,6 +4,7 @@ import { FileDown } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { ProductExplorer } from "@/components/ProductExplorer";
 import { ArrowUpRight } from "lucide-react";
+import { MoreArt } from "@/components/IndustryArt";
 import { waLink } from "@/lib/site";
 import { CtaBand } from "@/components/CtaBand";
 
@@ -20,7 +21,8 @@ export default function ProductosPage() {
       <section className="bg-ink-950 pb-24 pt-12 sm:pb-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ProductExplorer />
-          <div className="mt-16 rounded-3xl border border-dashed border-white/20 bg-white/[0.02] p-8 sm:p-10">
+          <div className="relative isolate mt-16 overflow-hidden rounded-3xl border border-dashed border-white/20 bg-gradient-to-br from-brand-deep/40 via-ink-900 to-ink-950 p-8 sm:p-10">
+            <MoreArt />
             <p className="font-display text-3xl font-semibold text-white">Y más…</p>
             <p className="mt-2 max-w-2xl text-slate-300">También suministramos otros insumos. Consultá disponibilidad y medidas:</p>
             <ul className="mt-5 flex flex-wrap gap-3">

@@ -74,3 +74,46 @@ export function IndustryArt({ slug }: { slug: string }) {
     </svg>
   );
 }
+
+/** Dibujo de líneas genérico para el bloque "Y más…" de /productos: caño, acople ranurado, electrodo y bobina de alambre MIG. */
+export function MoreArt() {
+  return (
+    <svg
+      viewBox="0 0 420 220"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-y-0 right-0 hidden h-full w-[55%] text-accent-cyan opacity-[0.32] md:block"
+      preserveAspectRatio="xMaxYMid meet"
+    >
+      <path d="M0 196H420" />
+      {/* caño con brida */}
+      <path d="M10 150h110M10 182h110" />
+      <ellipse cx="10" cy="166" rx="8" ry="16" />
+      <path d="M120 150a8 16 0 0 1 0 32" />
+      <rect x="62" y="140" width="10" height="52" rx="2" />
+      {/* acople ranurado */}
+      <path d="M150 150h20M150 182h20M232 150h20M232 182h20" />
+      <path d="M170 138h62v56h-62z" />
+      <path d="M180 138v56M222 138v56" />
+      <circle cx="201" cy="128" r="5" />
+      <path d="M201 123v-8M196 115h10" />
+      {/* electrodos */}
+      <g transform="translate(-32 0)">
+      <path d="M290 192L362 60" />
+      <path d="M302 192L374 62" />
+      <path d="M314 192L384 66" />
+      <path d="M286 198l10-10M298 198l10-10M310 198l10-10" />
+      </g>
+      {/* bobina de alambre MIG */}
+      <circle cx="350" cy="150" r="34" />
+      <circle cx="350" cy="150" r="14" />
+      <circle cx="350" cy="150" r="4" />
+      <path d="M350 116v-0M316 150h-0" />
+      <path d="M384 150c14 0 22 10 22 24v22" />
+    </svg>
+  );
+}
