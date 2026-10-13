@@ -13,6 +13,7 @@ const TILES: { key: CategoryKey; label?: string; text: string; ids: string[]; ph
     photos: [
       { src: "/products/bridas.webp", alt: "Bridas de acero: slip-on, welding neck, roscada y ciega" },
       { src: "/products/accesorios-soldar.webp", alt: "Accesorios para soldar: codos, tee, reducciones y tapa" },
+      { src: "/photos/canerias-gris.jpg", alt: "Codos y bridas abulonadas en una línea de cañería" },
     ],
   },
   { key: "valvulas", text: "Válvulas esféricas 1000 WOG en acero e inoxidable y válvulas de mariposa wafer de hierro dúctil.", ids: ["valvula-esferica-3c-acero", "valvula-esferica-3c-inox", "valvula-mariposa"] },
