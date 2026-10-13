@@ -18,8 +18,8 @@ export const INDUSTRIES: Industry[] = [
     title: "Petróleo & Gas",
     summary: "Sellado, válvulas y accesorios de cañería para instalaciones de hidrocarburos.",
     detail:
-      "Líneas de proceso, bombas, intercambiadores y recipientes a presión requieren sellado confiable y componentes dimensionados según norma. Reunimos empaquetaduras de grafito puro para temperaturas extremas, juntas espiraladas ASME B16.20, válvulas esféricas 1000 WOG y de mariposa, caños y accesorios para soldar.",
-    specs: ["Grafito puro hasta 450 °C (650 °C con vapor)", "Juntas espiraladas ASME B16.20", "Válvulas esféricas 1000 WOG", "Accesorios DIN / JIS DN 15 a DN 1500", "Caños"],
+      "Líneas de proceso, bombas, intercambiadores y recipientes a presión requieren sellado confiable y componentes dimensionados según norma. Reunimos empaquetaduras de grafito puro para temperaturas extremas, juntas espiraladas ASME B16.20, válvulas esféricas 1000 WOG y de mariposa, caños, tubos y accesorios para soldar.",
+    specs: ["Grafito puro hasta 450 °C (650 °C con vapor)", "Juntas espiraladas ASME B16.20", "Válvulas esféricas 1000 WOG", "Accesorios DIN / JIS DN 15 a DN 1500", "Caños", "Tubos"],
     productIds: ["empaquetadura-grafito-puro", "junta-espiralada-cgi", "valvula-esferica-3c-acero", "valvula-esferica-3c-inox", "valvula-mariposa", "codos-y-tapas", "tees-y-reducciones"],
     more: ["Caños", "Bridas", "Otras válvulas"],
     photo: "/photos/refineria-noche.jpg",
