@@ -3,9 +3,6 @@ import Link from "next/link";
 import { FileDown } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { ProductExplorer } from "@/components/ProductExplorer";
-import { ArrowUpRight } from "lucide-react";
-import { MoreArt } from "@/components/IndustryArt";
-import { waLink } from "@/lib/site";
 import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
@@ -21,19 +18,6 @@ export default function ProductosPage() {
       <section className="bg-ink-950 pb-24 pt-12 sm:pb-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ProductExplorer />
-          <div className="relative isolate mt-16 overflow-hidden rounded-3xl border border-dashed border-white/20 bg-gradient-to-br from-brand-deep/40 via-ink-900 to-ink-950 p-8 sm:p-10">
-            <MoreArt />
-            <p className="font-display text-3xl font-semibold text-white">Y más…</p>
-            <p className="mt-2 max-w-2xl text-slate-300">También suministramos otros insumos. Consultá disponibilidad y medidas:</p>
-            <ul className="mt-5 flex flex-wrap gap-3">
-              {["Caños", "Acoples ranurados", "Electrodos", "Alambre para soldar MIG"].map((x) => (
-                <li key={x} className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white">{x}</li>
-              ))}
-            </ul>
-            <a href={waLink("Hola Distrinova S.R.L., quisiera consultar por caños, acoples ranurados, electrodos y alambre MIG...")} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-1.5 font-semibold text-accent-cyan hover:underline">
-              Consultar por WhatsApp <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-            </a>
-          </div>
         </div>
       </section>
       <CtaBand />

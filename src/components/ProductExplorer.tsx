@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, m } from "framer-motion";
 import { ProductCard } from "./ProductCard";
+import { MoreCard } from "./MoreCard";
 import { CATEGORY_LABEL, PRODUCTS, type CategoryKey } from "@/lib/products";
 import { cn } from "@/lib/utils";
 
@@ -43,6 +44,11 @@ export function ProductExplorer() {
             {items.map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}
+            <MoreCard
+              intro="También suministramos otros insumos."
+              items={["Caños", "Acoples ranurados", "Electrodos", "Alambre para soldar MIG"]}
+              message="Hola Distrinova S.R.L., quisiera consultar por caños, acoples ranurados, electrodos y alambre MIG..."
+            />
           </div>
         </m.div>
       </AnimatePresence>

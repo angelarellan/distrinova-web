@@ -76,7 +76,7 @@ export function IndustryArt({ slug }: { slug: string }) {
 }
 
 /** Dibujo de líneas genérico para el bloque "Y más…" de /productos: caño, acople ranurado, electrodo y bobina de alambre MIG. */
-export function MoreArt() {
+export function MoreArt({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 420 220"
@@ -86,8 +86,8 @@ export function MoreArt() {
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      className="pointer-events-none absolute inset-y-0 right-0 hidden h-full w-[55%] text-accent-cyan opacity-[0.32] md:block"
-      preserveAspectRatio="xMaxYMid meet"
+      className={className ?? "pointer-events-none absolute inset-y-0 right-0 hidden h-full w-[55%] text-accent-cyan opacity-[0.32] md:block"}
+      preserveAspectRatio="xMidYMax meet"
     >
       <path d="M0 196H420" />
       {/* caño con brida */}
