@@ -2,7 +2,7 @@
 export type CategoryKey = "sellado" | "valvulas" | "canerias";
 
 export const CATEGORY_LABEL: Record<CategoryKey, string> = {
-  sellado: "Sellado industrial",
+  sellado: "Juntas industriales",
   valvulas: "Válvulas",
   canerias: "Accesorios de cañería",
 };

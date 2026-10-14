@@ -29,7 +29,7 @@ export function HomeHero() {
         </m.h1>
 
         <m.p {...item(2)} className="mt-7 max-w-xl text-lg leading-relaxed text-slate-300 sm:text-xl">
-          Distribuimos sellado industrial, válvulas y accesorios de cañería para equipos de compras, mantenimiento e ingeniería, con fichas técnicas completas y asesoramiento.
+          Distribuimos juntas industriales, válvulas y accesorios de cañería para equipos de compras, mantenimiento e ingeniería, con fichas técnicas completas y asesoramiento.
         </m.p>
 
         <m.div {...item(3)} className="mt-10 flex flex-col gap-3 sm:flex-row">

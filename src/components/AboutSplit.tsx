@@ -5,7 +5,7 @@ import { ParallaxPhoto } from "./ParallaxPhoto";
 import { SectionHeading } from "./SectionHeading";
 
 const DOES: { t: string; d: string }[] = [
-  { t: "Distribuimos", d: "Sellado industrial, válvulas y accesorios de cañería para operaciones de Oil & Gas." },
+  { t: "Distribuimos", d: "Juntas industriales, válvulas y accesorios de cañería para operaciones de Oil & Gas." },
   { t: "Asesoramos", d: "Te ayudamos a elegir según fluido, presión, temperatura y norma aplicable." },
   { t: "Cotizamos rápido", d: "Atención directa para paradas de planta y mantenimiento programado." },
 ];
