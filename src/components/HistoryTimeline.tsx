@@ -34,9 +34,9 @@ export function HistoryTimeline({ milestones }: { milestones: Milestone[] }) {
             aria-hidden="true"
           />
           <m.div
-            initial={reduce ? undefined : { opacity: 0, y: 24 }}
-            whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-15% 0px -20% 0px" }}
+            initial={reduce ? undefined : { opacity: 1, y: 24 }}
+            whileInView={reduce ? undefined : { y: 0 }}
+            viewport={{ once: true, margin: "0px 0px 400px 0px" }}
             transition={{ duration: 0.5, ease: easeOut, delay: i * 0.05 }}
           >
             <p className="font-display text-xl font-semibold text-accent-cyan">{mstone.when}</p>
