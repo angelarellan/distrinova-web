@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const PILLARS: { title: string; text: string }[] = [
-  { title: "Foco industrial", text: "Insumos pensados para operaciones donde la continuidad importa: sellado, válvulas y accesorios de cañería." },
+  { title: "Foco industrial", text: "Insumos pensados para operaciones donde la continuidad importa." },
   { title: "Información técnica", text: "Brindamos información sobre materiales, dimensiones, características y normativas aplicables a nuestros productos, facilitando su evaluación y selección." },
   { title: "Línea integrada", text: "Varias familias de producto reunidas para que tu equipo de compras resuelva más con un solo proveedor." },
   { title: "Trato directo", text: "Atención directa por WhatsApp y correo para cotizar, consultar medidas o confirmar disponibilidad." },
