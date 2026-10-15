@@ -42,8 +42,8 @@ export const INDUSTRIES: Industry[] = [
     title: "Industria Alimenticia",
     summary: "Bridas, accesorios y válvulas en acero inoxidable, juntas en PTFE…",
     detail:
-      "Donde el fluido no puede contaminarse, importan los materiales: PTFE inerte, acero inoxidable AISI 316 y sellos que no alteran el producto. Cinta de PTFE expandido compatible con requisitos FDA, empaquetadura Teflon bridas de acero inoxidable y válvulas esféricas en inoxidable.",
-    specs: ["Cinta PTFE compatible FDA", "Empaquetadura Teflon (pH 2–12)", "Válvulas esféricas AISI 316", "Sellos de PTFE", "Bridas de acero inoxidable"],
+      "Ofrecemos insumos industriales destinados a instalaciones de procesamiento, conducción de fluidos y mantenimiento de equipos en la industria alimenticia. Nuestra línea comprende componentes de acero inoxidable, materiales de sellado y accesorios de conexión, con distintas características técnicas para responder a los requerimientos de cada aplicación.",
+    specs: ["Bridas de acero inoxidable", "Válvulas esféricas de acero inoxidable", "Cintas de PTFE expandido", "Empaquetaduras de PTFE", "Juntas y elementos de sellado", "Accesorios de acero inoxidable"],
     productIds: ["bridas-inox", "accesorios-inox", "esparragos-tuercas", "valvula-esferica-2c-inox", "valvula-esferica-3c-inox", "cinta-ptfe-expandido", "empaquetadura-teflon"],
     more: ["Bridas de acero inoxidable"],
     photo: "/photos/planta-inox.jpg",
