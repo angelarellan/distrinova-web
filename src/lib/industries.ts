@@ -18,8 +18,8 @@ export const INDUSTRIES: Industry[] = [
     title: "Petróleo & Gas",
     summary: "Bridas, accesorios, válvulas, juntas…",
     detail:
-      "Líneas de proceso, bombas, intercambiadores y recipientes a presión requieren sellado confiable y componentes dimensionados según norma. Reunimos empaquetaduras de grafito puro para temperaturas extremas, juntas espiraladas ASME B16.20, válvulas esféricas 1000 WOG y de mariposa, caños, tubos y accesorios para soldar.",
-    specs: ["Grafito puro hasta 450 °C (650 °C con vapor)", "Juntas espiraladas ASME B16.20", "Válvulas esféricas 1000 WOG", "Accesorios DIN / JIS DN 15 a DN 1500", "Caños", "Tubos"],
+      "En Distrinova S.R.L. nos dedicamos a la importación y distribución de insumos destinados a la industria del petróleo y gas. Nuestra oferta comprende productos para sistemas de conducción de fluidos, instalaciones industriales, montaje y mantenimiento, con diferentes materiales, medidas y especificaciones técnicas de acuerdo con las necesidades de cada aplicación.",
+    specs: ["Bridas de acero al carbono", "Juntas industriales y espirometálicas", "Válvulas industriales", "Accesorios para soldar", "Espárragos y tuercas", "Cañerías de acero al carbono", "Empaquetaduras de grafito y PTFE", "Accesorios roscados"],
     productIds: ["bridas-acero", "esparragos-tuercas", "codos-y-tapas", "tees-y-reducciones", "valvula-esferica-3c-acero", "valvula-esferica-3c-inox", "valvula-mariposa", "empaquetadura-grafito-puro", "junta-espiralada-cgi"],
     more: ["Caños", "Bridas", "Otras válvulas"],
     photo: "/photos/refineria-noche.jpg",
