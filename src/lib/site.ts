@@ -14,15 +14,15 @@ export const SITE = {
   legalName: "Distrinova S.R.L.",
   finalDomain: "distrinovagroup.com",
   email: "info@distrinovagroup.com",
-  phoneE164: "+5491126424710",
-  phoneDisplay: "+54 9 11 2642-4710",
+  phoneE164: "+5491176158992",
+  phoneDisplay: "+54 9 11 7615-8992",
   catalogUrl: "https://heyzine.com/flip-book/008c69a47e.html",
   catalogPdf: "/catalogo-distrinova-2026.pdf",
   description:
     "Insumos industriales de alta precisión para Petróleo, Gas, Sistemas de Incendio e Industria Alimenticia. Distribución B2B con respaldo técnico.",
 } as const;
 
-export const WA_NUMBER = "5491126424710";
+export const WA_NUMBER = "5491176158992";
 
 export function waLink(message: string) {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
