@@ -481,7 +481,7 @@ const CATALOG: Omit<Product, "brand">[] = [
   {
     id: "bridas-acero",
     name: "Bridas de acero al carbono",
-    subtitle: "Para soldar y roscadas · Según norma",
+    subtitle: "",
     category: "canerias",
     group: "Bridas",
     image: "/products/bridas.webp",
@@ -506,10 +506,9 @@ const CATALOG: Omit<Product, "brand">[] = [
   {
     id: "accesorios-acero",
     name: "Accesorios para soldar",
-    subtitle: "Codos, tees, reducciones y tapas",
+    subtitle: "",
     category: "canerias",
     group: "Accesorios",
-    image: "/products/accesorios-soldar.webp",
     description: "Accesorios de acero al carbono para cañería. Ficha técnica con materiales, medidas y normas en preparación.",
     highlights: [],
     specs: [],
