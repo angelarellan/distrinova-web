@@ -608,7 +608,7 @@ const CATALOG: Omit<Product, "brand">[] = [
   {
     id: "esparragos-tuercas",
     name: "Espárragos y tuercas",
-    subtitle: "Espárragos B7 · Tuercas 2H",
+    subtitle: "Espárragos B7 · Tuercas 2H (zincado o natural)",
     category: "canerias",
     group: "Espárragos y tuercas",
     image: "/products/esparragos-tuercas.webp",

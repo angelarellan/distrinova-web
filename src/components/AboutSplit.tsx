@@ -7,7 +7,7 @@ import { SectionHeading } from "./SectionHeading";
 const DOES: { t: string; d: string }[] = [
   { t: "Distribuimos", d: "Bridas, accesorios para soldar, válvulas y juntas industriales, entre otros…" },
   { t: "Asesoramos", d: "Te orientamos en la elección de productos según las especificaciones de tu proyecto." },
-  { t: "Cotizamos rápido", d: "Respondemos a tus requerimientos con agilidad y atención personalizada." },
+  { t: "Compromiso comercial", d: "Respondemos a tus requerimientos con agilidad y atención personalizada." },
 ];
 
 export function AboutSplit() {
