@@ -12,7 +12,7 @@ import { CATEGORY_LABEL, PRODUCTS } from "@/lib/products";
 import { SITE, SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
-  return PRODUCTS.map((p) => ({ id: p.id }));
+  return PRODUCTS.filter((p) => !p.pending).map((p) => ({ id: p.id }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const p = PRODUCTS.find((x) => x.id === id);
-  if (!p) notFound();
-  const related = PRODUCTS.filter((x) => x.group === p.group && x.id !== p.id).concat(PRODUCTS.filter((x) => x.category === p.category && x.group !== p.group)).slice(0, 3);
+  if (!p || p.pending) notFound();
+  const related = PRODUCTS.filter((x) => !x.pending && x.group === p.group && x.id !== p.id).concat(PRODUCTS.filter((x) => !x.pending && x.category === p.category && x.group !== p.group)).slice(0, 3);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",

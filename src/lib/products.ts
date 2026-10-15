@@ -50,6 +50,8 @@ export interface Product {
   tables?: Table[];
   /** Marca que importa Distrinova. */
   brand: string;
+  /** Tarjeta "armada" a la espera de foto y ficha definitivas del cliente: se muestra con sello "Próximamente" y sin ficha. */
+  pending?: boolean;
 }
 
 const PACKING_SECTIONS: Table = {
@@ -477,6 +479,56 @@ const CATALOG: Omit<Product, "brand">[] = [
     ],
   },
   {
+    id: "bridas-acero",
+    name: "Bridas de acero al carbono",
+    subtitle: "Para soldar y roscadas · Según norma",
+    category: "canerias",
+    group: "Bridas",
+    image: "/products/bridas.webp",
+    description: "Bridas de acero al carbono para instalaciones industriales. Ficha técnica con materiales, medidas y normas en preparación.",
+    highlights: [],
+    specs: [],
+    features: [],
+    pending: true,
+  },
+  {
+    id: "bridas-inox",
+    name: "Bridas de acero inoxidable",
+    subtitle: "Para soldar y roscadas · Según norma",
+    category: "canerias",
+    group: "Bridas",
+    description: "Bridas de acero inoxidable para instalaciones industriales. Ficha técnica con materiales, medidas y normas en preparación.",
+    highlights: [],
+    specs: [],
+    features: [],
+    pending: true,
+  },
+  {
+    id: "accesorios-acero",
+    name: "Accesorios de acero al carbono",
+    subtitle: "Para soldar · Medidas a confirmar",
+    category: "canerias",
+    group: "Accesorios",
+    image: "/products/accesorios-soldar.webp",
+    description: "Accesorios de acero al carbono para cañería. Ficha técnica con materiales, medidas y normas en preparación.",
+    highlights: [],
+    specs: [],
+    features: [],
+    pending: true,
+  },
+  {
+    id: "accesorios-inox",
+    name: "Accesorios de acero inoxidable",
+    subtitle: "Para soldar · Medidas a confirmar",
+    category: "canerias",
+    group: "Accesorios",
+    description: "Accesorios de acero inoxidable para cañería. Ficha técnica con materiales, medidas y normas en preparación.",
+    highlights: [],
+    specs: [],
+    features: [],
+    pending: true,
+  },
+  {
     id: "codos-y-tapas",
     name: "Codos y tapas",
     subtitle: "Para soldar · DN 15 a DN 1200",
@@ -537,6 +589,18 @@ const CATALOG: Omit<Product, "brand">[] = [
       ["Espesor de pared", "Consultar Tablas 1, 2 y 9 del catálogo PDF"],
     ],
     features: ["Pesos teóricos calculados; pueden variar según tolerancias de fabricación", "Combinaciones de diámetros en el catálogo PDF"],
+  },
+  {
+    id: "esparragos-tuercas",
+    name: "Espárragos y tuercas",
+    subtitle: "Espárragos B7 · Tuercas 2H",
+    category: "canerias",
+    group: "Espárragos y tuercas",
+    description: "Espárragos B7 y tuercas 2H (negros y zincados amarillos) para uniones bridadas. Ficha técnica con medidas y normas en preparación.",
+    highlights: [],
+    specs: [],
+    features: [],
+    pending: true,
   },
 ];
 
