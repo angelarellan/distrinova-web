@@ -12,7 +12,7 @@ export function ProductCard({ product: p, sizes = "(min-width:1024px) 400px, (mi
           {p.image ? (
             <ProductImage product={p} sizes={sizes} className="opacity-90" />
           ) : (
-            <div className="relative flex aspect-[4/3] w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-brand-deep/40 to-ink-900 text-slate-400">
+            <div className="relative flex aspect-[4/3] w-full flex-col items-center justify-center gap-2 bg-white text-slate-400">
               <ImageIcon className="h-8 w-8" aria-hidden="true" />
               <span className="text-xs font-medium uppercase tracking-wide">Foto próximamente</span>
             </div>

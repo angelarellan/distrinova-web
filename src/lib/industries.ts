@@ -32,8 +32,8 @@ export const INDUSTRIES: Industry[] = [
     detail:
       "Comercializamos una variedad de componentes destinados a redes de distribución de agua para sistemas de protección contra incendios. Nuestra línea incluye válvulas, acoples ranurados, cañerías y accesorios para instalaciones industriales y comerciales, con distintas medidas y especificaciones técnicas según los requerimientos de cada proyecto.",
     specs: ["Válvulas mariposa tipo wafer", "Válvulas de retención", "Acoples ranurados rígidos", "Accesorios ranurados", "Cañerías de acero al carbono", "Accesorios roscados", "Bridas industriales", "Accesorios para soldar"],
-    productIds: ["bridas-acero", "accesorios-acero", "esparragos-tuercas", "valvula-mariposa", "junta-espiralada-cgi"],
-    more: ["Acoples ranurados", "Caños"],
+    productIds: ["valvula-mariposa", "bridas-acero", "accesorios-acero", "esparragos-tuercas", "junta-espiralada-cgi", "acople-ranurado"],
+    more: ["Caños"],
     photo: "/photos/incendio-collage-v4.jpg",
     photoAlt: "Válvula de hidrante, caños rojos ranurados y acoples ranurados para redes contra incendio",
   },
