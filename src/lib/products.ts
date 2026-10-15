@@ -617,5 +617,16 @@ const CATALOG: Omit<Product, "brand">[] = [
   },
 ];
 
-export const PRODUCTS: Product[] = CATALOG.map((p) => ({ ...p, brand: "DNova" }));
+// Orden de aparición en /productos y en todas las industrias (prioridad definida por el cliente):
+// bridas → accesorios → codos/tees/acoples → espárragos → válvulas → juntas → empaquetaduras → cintas.
+const DISPLAY_ORDER = [
+  "bridas-acero", "bridas-inox", "accesorios-acero", "accesorios-inox",
+  "codos-y-tapas", "tees-y-reducciones", "acople-ranurado", "esparragos-tuercas",
+  "valvula-esferica-3c-acero", "valvula-esferica-3c-inox", "valvula-esferica-2c-inox", "valvula-mariposa",
+  "junta-espiralada-cgi", "empaquetadura-teflon", "empaquetadura-grafitada", "empaquetadura-grafito-puro", "cinta-ptfe-expandido",
+];
+
+export const PRODUCTS: Product[] = CATALOG.map((p) => ({ ...p, brand: "DNova" })).sort(
+  (a, b) => DISPLAY_ORDER.indexOf(a.id) - DISPLAY_ORDER.indexOf(b.id),
+);
 

@@ -7,7 +7,10 @@ import { ProductCard } from "@/components/ProductCard";
 import { CtaBand } from "@/components/CtaBand";
 import { MoreCard } from "@/components/MoreCard";
 import { INDUSTRIES } from "@/lib/industries";
-import { PRODUCTS } from "@/lib/products";
+import { CATEGORY_LABEL, PRODUCTS, type CategoryKey } from "@/lib/products";
+
+// Orden canónico de productos (igual que en /productos): por categoría y luego por posición en el catálogo.
+const PRODUCT_ORDER = (Object.keys(CATEGORY_LABEL) as CategoryKey[]).flatMap((c) => PRODUCTS.filter((p) => p.category === c).map((p) => p.id));
 
 export const metadata: Metadata = {
   title: "Industrias",
@@ -40,7 +43,7 @@ export default function IndustriasPage() {
             </Reveal>
             <h3 className="mb-6 mt-12 font-display text-2xl font-semibold text-white">Productos para {ind.title}</h3>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {ind.productIds.map((id) => {
+              {[...ind.productIds].sort((a, b) => PRODUCT_ORDER.indexOf(a) - PRODUCT_ORDER.indexOf(b)).map((id) => {
                 const p = PRODUCTS.find((x) => x.id === id);
                 return p ? <ProductCard key={id} product={p} /> : null;
               })}
