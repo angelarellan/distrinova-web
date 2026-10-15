@@ -611,7 +611,7 @@ const CATALOG: Omit<Product, "brand">[] = [
     subtitle: "Espárragos B7 · Tuercas 2H (zincado o natural)",
     category: "canerias",
     group: "Espárragos y tuercas",
-    image: "/products/esparragos-tuercas.webp",
+    image: "/products/esparragos-tuercas-v2.webp",
     description: "Espárragos B7 y tuercas 2H (negros y zincados amarillos) para uniones bridadas. Ficha técnica con medidas y normas en preparación.",
     highlights: [],
     specs: [],
