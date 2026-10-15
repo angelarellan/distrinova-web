@@ -523,7 +523,7 @@ const CATALOG: Omit<Product, "brand">[] = [
     subtitle: "Para soldar · Medidas a confirmar",
     category: "canerias",
     group: "Accesorios",
-    image: "/products/accesorios-inox.webp",
+    image: "/products/accesorios-forjados.webp",
     description: "Accesorios de acero inoxidable para cañería. Ficha técnica con materiales, medidas y normas en preparación.",
     highlights: [],
     specs: [],
