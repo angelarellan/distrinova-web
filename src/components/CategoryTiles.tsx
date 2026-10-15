@@ -10,8 +10,8 @@ const blurProps = (src: string) => (BLUR[src] ? ({ placeholder: "blur", blurData
 const TILES: { key: CategoryKey; label?: string; text: string; ids: string[]; photos?: { src: string; alt: string }[] }[] = [
   {
     key: "canerias",
-    label: "Bridas y accesorios",
-    text: "Bridas, accesorios, espárragos y tuercas.",
+    label: "Bridas, accesorios, espárragos y tuercas",
+    text: "Bridas, codos, tapas, tees y reducciones para soldar, según norma.",
     ids: [],
     photos: [
       { src: "/products/bridas.webp", alt: "Bridas de acero: slip-on, welding neck, roscada y ciega" },
