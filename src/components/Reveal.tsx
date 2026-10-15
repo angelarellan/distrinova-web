@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import { easeOut } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
-const viewport = { once: true, margin: "0px 0px 300px 0px" } as const;
+const viewport = { once: true, margin: "0px 0px 600px 0px" } as const;
 
 export function Reveal({ children, delay = 0, y = 14, className }: { children: ReactNode; delay?: number; y?: number; className?: string }) {
   return (

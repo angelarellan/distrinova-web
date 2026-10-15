@@ -3,6 +3,9 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Stagger, StaggerItem } from "./Reveal";
 import { CATEGORY_LABEL, PRODUCTS, type CategoryKey } from "@/lib/products";
+import { BLUR } from "@/lib/blur";
+
+const blurProps = (src: string) => (BLUR[src] ? ({ placeholder: "blur", blurDataURL: BLUR[src] } as const) : {});
 
 const TILES: { key: CategoryKey; label?: string; text: string; ids: string[]; photos?: { src: string; alt: string }[] }[] = [
   {
@@ -31,12 +34,12 @@ export function CategoryTiles() {
               <div className="grid h-36 grid-cols-3 gap-2">
                 {t.photos?.map((ph) => (
                   <div key={ph.src} className="relative overflow-hidden rounded-xl bg-white">
-                    <Image src={ph.src} alt={ph.alt} fill sizes="140px" className="object-cover" />
+                    <Image src={ph.src} alt={ph.alt} fill sizes="140px" {...blurProps(ph.src)} className="object-cover" />
                   </div>
                 ))}
                 {items.map((p) => (
                   <div key={p.id} className="relative overflow-hidden rounded-xl bg-white">
-                    <Image src={p.image!} alt={p.name} fill sizes="140px" unoptimized={p.image!.endsWith(".svg")} className={p.imageFit === "cover" ? "object-cover" : "object-contain p-1.5"} />
+                    <Image src={p.image!} alt={p.name} fill sizes="140px" {...blurProps(p.image!)} unoptimized={p.image!.endsWith(".svg")} className={p.imageFit === "cover" ? "object-cover" : "object-contain p-1.5"} />
                   </div>
                 ))}
               </div>
