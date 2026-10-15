@@ -519,7 +519,7 @@ const CATALOG: Omit<Product, "brand">[] = [
   },
   {
     id: "accesorios-inox",
-    name: "Accesorios de acero inoxidable",
+    name: "Accesorios forjados",
     subtitle: "Para soldar · Medidas a confirmar",
     category: "canerias",
     group: "Accesorios",
