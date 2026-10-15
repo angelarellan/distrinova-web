@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function IndustriasPage() {
   return (
     <>
-      <PageHero eyebrow="Industrias" title="Especialistas donde la falla no es una opción" text="Cada sector exige normas, materiales y pruebas distintas. Estas son las líneas con las que trabajamos en cada uno." art={{ src: "/showcase/valvula-mariposa.webp", w: 900, h: 612 }} crumbs={[{ label: "Industrias" }]} />
+      <PageHero eyebrow="Industrias" title="Productos industriales para sectores que exigen calidad y confiabilidad" text="Cada industria presenta necesidades y requerimientos específicos. En Distrinova ofrecemos una selección de productos orientados a diferentes aplicaciones industriales, considerando las características técnicas, los materiales y las normativas correspondientes." art={{ src: "/showcase/valvula-mariposa.webp", w: 900, h: 612 }} crumbs={[{ label: "Industrias" }]} />
       {INDUSTRIES.map((ind, idx) => (
         <section key={ind.slug} id={ind.slug} className={`scroll-mt-20 py-16 sm:py-24 ${idx % 2 ? "bg-ink-900" : "bg-ink-950"}`}>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
