@@ -16,7 +16,7 @@ export const INDUSTRIES: Industry[] = [
   {
     slug: "petroleo-gas",
     title: "Petróleo & Gas",
-    summary: "Sellado, válvulas y accesorios de cañería para instalaciones de hidrocarburos.",
+    summary: "Bridas, accesorios, válvulas, juntas…",
     detail:
       "Líneas de proceso, bombas, intercambiadores y recipientes a presión requieren sellado confiable y componentes dimensionados según norma. Reunimos empaquetaduras de grafito puro para temperaturas extremas, juntas espiraladas ASME B16.20, válvulas esféricas 1000 WOG y de mariposa, caños, tubos y accesorios para soldar.",
     specs: ["Grafito puro hasta 450 °C (650 °C con vapor)", "Juntas espiraladas ASME B16.20", "Válvulas esféricas 1000 WOG", "Accesorios DIN / JIS DN 15 a DN 1500", "Caños", "Tubos"],
@@ -40,7 +40,7 @@ export const INDUSTRIES: Industry[] = [
   {
     slug: "alimenticia",
     title: "Industria Alimenticia",
-    summary: "Materiales inertes y acero inoxidable para procesos que no deben contaminarse.",
+    summary: "Bridas, accesorios y válvulas en acero inoxidable, juntas en PTFE…",
     detail:
       "Donde el fluido no puede contaminarse, importan los materiales: PTFE inerte, acero inoxidable AISI 316 y sellos que no alteran el producto. Cinta de PTFE expandido compatible con requisitos FDA, empaquetadura Teflon bridas de acero inoxidable y válvulas esféricas en inoxidable.",
     specs: ["Cinta PTFE compatible FDA", "Empaquetadura Teflon (pH 2–12)", "Válvulas esféricas AISI 316", "Sellos de PTFE", "Bridas de acero inoxidable"],

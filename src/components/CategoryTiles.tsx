@@ -11,7 +11,7 @@ const TILES: { key: CategoryKey; label?: string; text: string; ids: string[]; ph
   {
     key: "canerias",
     label: "Bridas y accesorios",
-    text: "Bridas, codos, tapas, tees y reducciones para soldar, de DN 15 a DN 1500, según normas DIN y JIS.",
+    text: "Bridas, codos, tapas, tees y reducciones para soldar, según norma.",
     ids: [],
     photos: [
       { src: "/products/bridas.webp", alt: "Bridas de acero: slip-on, welding neck, roscada y ciega" },
@@ -19,8 +19,8 @@ const TILES: { key: CategoryKey; label?: string; text: string; ids: string[]; ph
       { src: "/photos/canerias-gris.jpg", alt: "Codos y bridas abulonadas en una línea de cañería" },
     ],
   },
-  { key: "valvulas", text: "Válvulas esféricas 1000 WOG en acero e inoxidable y válvulas de mariposa wafer de hierro dúctil.", ids: ["valvula-esferica-3c-acero", "valvula-esferica-3c-inox", "valvula-mariposa"] },
-  { key: "sellado", text: "Empaquetaduras trenzadas, juntas espiraladas y cinta de PTFE para sellar ejes, vástagos y bridas.", ids: ["empaquetadura-grafito-puro", "junta-espiralada-cgi", "cinta-ptfe-expandido"] },
+  { key: "valvulas", text: "Válvulas mariposa y esféricas en acero al carbono e inoxidable.", ids: ["valvula-esferica-3c-acero", "valvula-esferica-3c-inox", "valvula-mariposa"] },
+  { key: "sellado", text: "Empaquetaduras trenzadas, juntas espiraladas y cinta de PTFE expandido.", ids: ["empaquetadura-grafito-puro", "junta-espiralada-cgi", "cinta-ptfe-expandido"] },
 ];
 
 export function CategoryTiles() {

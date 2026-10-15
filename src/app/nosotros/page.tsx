@@ -5,7 +5,6 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
 import { ParallaxPhoto } from "@/components/ParallaxPhoto";
 import { StatsBand } from "@/components/StatsBand";
-import { HistoryTimeline } from "@/components/HistoryTimeline";
 import { CtaBand } from "@/components/CtaBand";
 import { BRANDS } from "@/lib/brands";
 
@@ -17,15 +16,9 @@ export const metadata: Metadata = {
 
 const PILLARS: { title: string; text: string }[] = [
   { title: "Foco industrial", text: "Insumos pensados para operaciones donde la continuidad importa: sellado, válvulas y accesorios de cañería." },
-  { title: "Información técnica clara", text: "Cada producto tiene su ficha con materiales, normas, presión, temperatura y dimensiones, para decidir con datos." },
+  { title: "Información técnica", text: "Brindamos información sobre materiales, dimensiones, características y normativas aplicables a nuestros productos, facilitando su evaluación y selección." },
   { title: "Línea integrada", text: "Varias familias de producto reunidas para que tu equipo de compras resuelva más con un solo proveedor." },
   { title: "Trato directo", text: "Atención directa por WhatsApp y correo para cotizar, consultar medidas o confirmar disponibilidad." },
-];
-
-const MILESTONES = [
-  { when: "2015", title: "Nacemos en el alumbrado público", text: "Distrinova da sus primeros pasos proveyendo soluciones para proyectos de alumbrado público, donde aprendimos a trabajar con licitaciones, plazos y especificaciones exigentes." },
-  { when: "2023", title: "Giro hacia los insumos industriales", text: "Nos especializamos en insumos para petróleo, gas e industrias, con un criterio innegociable: la calidad de cada producto que entra a nuestro catálogo." },
-  { when: "2026", title: "Marcas propias y catálogo Oil & Gas", text: "Nos consolidamos como importadores de las marcas DNova, Fixy y Hardweld, publicamos el catálogo Oil & Gas 2026 y llevamos todas las fichas técnicas online." },
 ];
 
 const MISSION_VISION = [
@@ -35,14 +28,14 @@ const MISSION_VISION = [
   },
   {
     label: "Visión",
-    text: "Ser la distribuidora de insumos industriales de referencia en Argentina y la región: la primera opción de los equipos de compras y mantenimiento que no resignan calidad, con marcas propias consolidadas y una gestión de calidad en camino a la certificación ISO 9001:2015.",
+    text: "Continuar creciendo como una empresa confiable en la distribución de insumos industriales, fortaleciendo las relaciones con nuestros clientes, ampliando nuestra oferta de productos y mejorando continuamente nuestros procesos.",
   },
 ];
 
 export default function NosotrosPage() {
   return (
     <>
-      <PageHero eyebrow="Nosotros" title="Distribución industrial con respaldo técnico" text="Distrinova S.R.L. abastece a equipos de compras, mantenimiento e ingeniería de las industrias del petróleo, el gas, la protección contra incendio y la alimenticia." art={{ src: "/showcase/valvula-esferica-3c-inox.webp", w: 900, h: 635 }} crumbs={[{ label: "Nosotros" }]} />
+      <PageHero eyebrow="Nosotros" title="Conectamos industrias con productos de calidad" text="Distrinova S.R.L. abastece a equipos de compras, mantenimiento e ingeniería de las industrias del petróleo, el gas, la protección contra incendio y la alimenticia." art={{ src: "/showcase/valvula-esferica-3c-inox.webp", w: 900, h: 635 }} crumbs={[{ label: "Nosotros" }]} />
 
       <section className="bg-ink-950 py-14 sm:py-20">
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
@@ -66,15 +59,6 @@ export default function NosotrosPage() {
       </section>
 
       <StatsBand />
-
-      <section className="bg-ink-900 py-20 sm:py-28">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-5 lg:gap-20 lg:px-8">
-          <div className="lg:col-span-2">
-            <SectionHeading eyebrow="Nuestra historia" title="Cómo llegamos hasta acá" text="Del alumbrado público a los insumos Oil & Gas: más de diez años de trabajo junto a la industria." />
-          </div>
-          <HistoryTimeline milestones={MILESTONES} />
-        </div>
-      </section>
 
       <section className="bg-ink-950 py-20 sm:py-28" aria-label="Misión y visión">
         <div className="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
@@ -114,13 +98,13 @@ export default function NosotrosPage() {
       {BRANDS.length > 0 && (
         <section className="border-t border-white/10 bg-ink-950 py-20 sm:py-28" aria-label="Marcas">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionHeading eyebrow="Marcas que importamos" title="Tres marcas, una misma exigencia" text="Somos importadores de las marcas con las que armamos nuestro catálogo." />
+            <SectionHeading eyebrow="Marcas que importamos" title="Un mismo compromiso con la calidad" text="En Distrinova S.R.L. desarrollamos y comercializamos marcas propias, orientadas a diferentes segmentos del mercado industrial. Cada una cuenta con una línea de productos específica, seleccionada para responder a los requerimientos de nuestros clientes." />
             <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {BRANDS.map((b, i) => (
                 <Reveal key={b.name} delay={i * 0.1} className="h-full">
                   <div className="flex h-full flex-col gap-6 rounded-3xl border border-white/10 bg-ink-900 p-7 sm:flex-row sm:items-center lg:flex-col lg:items-start">
                     <div className="flex h-28 w-full shrink-0 items-center justify-center rounded-2xl bg-white px-7 py-4 sm:w-48 lg:w-full">
-                      <Image src={b.logo} alt={`Logo de ${b.name}`} width={b.w} height={b.h} sizes="190px" className="max-h-16 w-auto object-contain" />
+                      <Image src={b.logo} alt={`Logo de ${b.name}`} width={b.w} height={b.h} sizes="190px" className={`w-auto object-contain ${b.name === "Fixy" ? "max-h-20" : "max-h-16"}`} />
                     </div>
                     <div>
                       <h3 className="font-display text-2xl font-bold text-white">{b.name}</h3>

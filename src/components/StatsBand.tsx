@@ -3,7 +3,7 @@ import { Stagger, StaggerItem } from "./Reveal";
 
 const STATS = [
   { value: 10, prefix: "+", suffix: "", label: "Años en el rubro industrial, desde 2015" },
-  { value: 3, prefix: "", suffix: "", label: "Marcas que importamos y comercializamos: DNova, Fixy y Hardweld" },
+  { value: 3, prefix: "", suffix: "", label: "Marcas que importamos y comercializamos: Fixy, DNova y Hardweld" },
   { value: 4, prefix: "+", suffix: "", label: "Sectores: Oil & Gas, petroquímico, energético y otras industrias" },
 ];
 

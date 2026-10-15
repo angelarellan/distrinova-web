@@ -26,7 +26,7 @@ export default function Home() {
       <section className="bg-ink-950 py-24 sm:py-32" aria-label="Qué ofrecemos">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-            <SectionHeading eyebrow="Qué ofrecemos" title="Tres familias de producto, una sola fuente" />
+            <SectionHeading eyebrow="Qué ofrecemos" title="Especialización y variedad al servicio de la industria" />
             <Reveal>
               <Link href="/productos" className={link}>
                 Ver todos los productos <ArrowRight className="h-4 w-4" />
