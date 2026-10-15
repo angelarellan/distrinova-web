@@ -69,11 +69,23 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-slate-400 sm:flex-row sm:px-6 lg:px-8">
-          <p>
-            © {year} {SITE.legalName} Todos los derechos reservados.
-          </p>
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-2 px-4 py-6 text-center text-xs text-slate-400 sm:px-6 lg:px-8">
           <p>Las especificaciones pueden cambiar sin previo aviso. Consultá disponibilidad.</p>
+          <p className="flex flex-col items-center gap-x-2 gap-y-1 sm:flex-row">
+            <span>© {year} {SITE.legalName} Todos los derechos reservados.</span>
+            <span aria-hidden="true" className="hidden sm:inline">·</span>
+            <span>
+              Desarrollado por{" "}
+              <a
+                href="https://www.softivastudio.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-slate-300 transition hover:text-white"
+              >
+                SoftivaStudio
+              </a>
+            </span>
+          </p>
         </div>
       </div>
     </footer>
