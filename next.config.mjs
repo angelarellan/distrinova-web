@@ -8,7 +8,7 @@ const csp = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://vercel.live https://vercel.com",
   "font-src 'self' data: https://vercel.live",
-  "connect-src 'self' https://vercel.live wss://ws-us3.pusher.com https://*.vercel.app",
+  "connect-src 'self' https://vercel.live wss://ws-us3.pusher.com https://*.vercel.app https://api.web3forms.com",
   "frame-src 'self' https://heyzine.com https://*.heyzine.com https://vercel.live",
   "object-src 'none'",
   "base-uri 'self'",
