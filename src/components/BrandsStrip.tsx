@@ -10,7 +10,7 @@ export function BrandsStrip() {
     <ul className="flex shrink-0 items-center gap-6 pr-6" aria-hidden={hidden || undefined}>
       {base.map((b, i) => (
         <li key={`${b.name}-${i}`} className="flex h-28 w-64 items-center justify-center rounded-2xl border border-white/10 bg-white px-8 py-4 transition hover:border-accent-cyan/40">
-          <Image src={b.logo} alt={`Logo de ${b.name}`} width={b.w} height={b.h} sizes="200px" className={`w-auto object-contain ${b.name === "Fixy" ? "max-h-20" : "max-h-16"}`} />
+          <Image src={b.logo} alt={`Logo de ${b.name}`} width={b.w} height={b.h} sizes="200px" className={`w-auto object-contain ${b.name === "Fixy" ? "max-h-24" : "max-h-16"}`} />
         </li>
       ))}
     </ul>
