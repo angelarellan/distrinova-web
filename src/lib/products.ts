@@ -510,7 +510,7 @@ const CATALOG: Omit<Product, "brand">[] = [
     subtitle: "",
     category: "canerias",
     group: "Accesorios",
-    image: "/products/accesorios-acero-v2.webp",
+    image: "/products/accesorios-acero-v4.webp",
     description: "Accesorios de acero al carbono para cañería. Ficha técnica con materiales, medidas y normas en preparación.",
     highlights: [],
     specs: [],
