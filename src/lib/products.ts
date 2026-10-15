@@ -480,7 +480,7 @@ const CATALOG: Omit<Product, "brand">[] = [
   },
   {
     id: "bridas-acero",
-    name: "Bridas Serie 150-300-600 de acero al carbono",
+    name: "Bridas serie 150-300-600 de acero al carbono",
     subtitle: "",
     category: "canerias",
     group: "Bridas",
@@ -493,7 +493,7 @@ const CATALOG: Omit<Product, "brand">[] = [
   },
   {
     id: "bridas-inox",
-    name: "Bridas serie-150 de acero inoxidable",
+    name: "Bridas serie 150 de acero inoxidable",
     subtitle: "Para soldar y roscadas · Según norma",
     category: "canerias",
     group: "Bridas",
