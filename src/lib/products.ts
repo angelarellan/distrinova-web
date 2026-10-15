@@ -506,7 +506,7 @@ const CATALOG: Omit<Product, "brand">[] = [
   },
   {
     id: "accesorios-acero",
-    name: "Accesorios de acero",
+    name: "Accesorios de acero inoxidable",
     subtitle: "",
     category: "canerias",
     group: "Accesorios",
