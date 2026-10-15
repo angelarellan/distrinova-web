@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <PageHero eyebrow="Blog" title="Guías técnicas para elegir mejor" text="Criterios de selección, normas y buenas prácticas sobre sellado, válvulas y cañería industrial." art={{ src: "/showcase/valvula-esferica-3c-inox.webp", w: 900, h: 635 }} crumbs={[{ label: "Blog" }]} />
+      <PageHero eyebrow="Blog" title="Información y actualidad industrial" text="Compartimos contenidos sobre productos, materiales, normativas y novedades relacionadas con los sectores industriales en los que participamos." art={{ src: "/showcase/valvula-esferica-3c-inox.webp", w: 900, h: 635 }} crumbs={[{ label: "Blog" }]} />
       <section className="bg-ink-950 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Stagger className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">

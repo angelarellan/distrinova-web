@@ -1,10 +1,11 @@
 // Datos migrados del Catálogo Distrinova Oil & Gas 2026 (fichas 05/2025).
 export type CategoryKey = "sellado" | "valvulas" | "canerias";
 
+// Orden de aparición en /productos (criterio de importancia del cliente): accesorios → válvulas → juntas al final.
 export const CATEGORY_LABEL: Record<CategoryKey, string> = {
-  sellado: "Juntas industriales",
-  valvulas: "Válvulas",
   canerias: "Accesorios de cañería",
+  valvulas: "Válvulas",
+  sellado: "Juntas industriales",
 };
 
 /** Subgrupos dentro de cada categoría (criterio habitual de la industria: sellado dinámico vs. estático, tipo de válvula, tipo de accesorio). */
