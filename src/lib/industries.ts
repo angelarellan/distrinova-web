@@ -44,7 +44,7 @@ export const INDUSTRIES: Industry[] = [
     detail:
       "Ofrecemos insumos industriales destinados a instalaciones de procesamiento, conducción de fluidos y mantenimiento de equipos en la industria alimenticia. Nuestra línea comprende componentes de acero inoxidable, materiales de sellado y accesorios de conexión, con distintas características técnicas para responder a los requerimientos de cada aplicación.",
     specs: ["Bridas de acero inoxidable", "Válvulas esféricas de acero inoxidable", "Cintas de PTFE expandido", "Empaquetaduras de PTFE", "Juntas y elementos de sellado", "Accesorios de acero inoxidable"],
-    productIds: ["bridas-inox", "accesorios-inox", "esparragos-tuercas", "valvula-esferica-2c-inox", "valvula-esferica-3c-inox", "cinta-ptfe-expandido", "empaquetadura-teflon"],
+    productIds: ["valvula-esferica-2c-inox", "valvula-esferica-3c-inox", "cinta-ptfe-expandido", "empaquetadura-teflon", "bridas-inox", "accesorios-inox", "esparragos-tuercas"],
     more: ["Bridas de acero inoxidable"],
     photo: "/photos/planta-inox.jpg",
     photoAlt: "Planta de procesos en acero inoxidable",
