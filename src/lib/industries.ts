@@ -20,7 +20,7 @@ export const INDUSTRIES: Industry[] = [
     detail:
       "En Distrinova S.R.L. nos dedicamos a la importación y distribución de insumos destinados a la industria del petróleo y gas. Nuestra oferta comprende productos para sistemas de conducción de fluidos, instalaciones industriales, montaje y mantenimiento, con diferentes materiales, medidas y especificaciones técnicas de acuerdo con las necesidades de cada aplicación.",
     specs: ["Bridas de acero al carbono", "Juntas industriales y espirometálicas", "Válvulas industriales", "Accesorios para soldar", "Espárragos y tuercas", "Cañerías de acero al carbono", "Empaquetaduras de grafito y PTFE", "Accesorios roscados"],
-    productIds: ["bridas-acero", "esparragos-tuercas", "codos-y-tapas", "tees-y-reducciones", "valvula-esferica-3c-acero", "valvula-esferica-3c-inox", "valvula-mariposa", "empaquetadura-grafito-puro", "junta-espiralada-cgi"],
+    productIds: ["bridas-acero", "esparragos-tuercas", "valvula-esferica-3c-acero", "valvula-esferica-3c-inox", "valvula-mariposa", "empaquetadura-grafito-puro", "junta-espiralada-cgi", "codos-y-tapas", "tees-y-reducciones"],
     more: ["Caños", "Bridas", "Otras válvulas"],
     photo: "/photos/refineria-noche.jpg",
     photoAlt: "Refinería al anochecer con torres iluminadas",
