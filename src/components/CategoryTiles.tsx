@@ -11,12 +11,12 @@ const TILES: { key: CategoryKey; label?: string; text: string; ids: string[]; ph
   {
     key: "canerias",
     label: "Bridas y accesorios",
-    text: "Bridas, codos, tapas, tees y reducciones para soldar, según norma.",
+    text: "Bridas, accesorios, espárragos y tuercas.",
     ids: [],
     photos: [
       { src: "/products/bridas.webp", alt: "Bridas de acero: slip-on, welding neck, roscada y ciega" },
       { src: "/products/accesorios-soldar.webp", alt: "Accesorios para soldar: codos, tee, reducciones y tapa" },
-      { src: "/photos/canerias-gris.jpg", alt: "Codos y bridas abulonadas en una línea de cañería" },
+      { src: "/products/esparragos-tuercas-v2.webp", alt: "Espárragos y tuercas B7, negros y zincados" },
     ],
   },
   { key: "valvulas", text: "Válvulas mariposa y esféricas en acero al carbono e inoxidable.", ids: ["valvula-esferica-3c-acero", "valvula-esferica-3c-inox", "valvula-mariposa"] },
