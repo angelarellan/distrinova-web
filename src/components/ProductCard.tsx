@@ -22,7 +22,7 @@ export function ProductCard({ product: p, sizes = "(min-width:1024px) 400px, (mi
         <div className="flex flex-1 flex-col p-6">
           <h3 className="font-display text-lg font-semibold leading-snug text-white">{p.name}</h3>
           {p.subtitle && <p className="mt-1 text-sm text-slate-400">{p.subtitle}</p>}
-          <p className="mt-auto pt-5 text-sm font-medium text-slate-500">Ficha técnica en preparación</p>
+          <p className="mt-auto pt-5 text-sm font-medium text-slate-400">Ficha técnica en preparación</p>
         </div>
       </article>
     );
