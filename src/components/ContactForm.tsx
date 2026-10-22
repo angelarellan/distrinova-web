@@ -71,8 +71,8 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: `Consulta web${v.producto ? ` — ${v.producto}` : ""}`,
-          from_name: `${v.nombre} (web Distrinova)`,
+          subject: `Consulta web Distrinova${v.producto ? ` — ${v.producto}` : ""}`,
+          from_name: "Formulario web Distrinova",
           replyto: v.email,
           Nombre: v.nombre,
           Empresa: v.empresa || "—",
