@@ -1,18 +1,13 @@
-const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : undefined;
-
-/** URL base: variable de entorno > URL de producción de Vercel > subdominio por defecto. */
+/** URL base del sitio en producción (dominio propio). Se puede sobreescribir con NEXT_PUBLIC_SITE_URL. */
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ??
-  vercelUrl ??
-  "https://distrinova.vercel.app"
+  "https://www.distrinovagroup.com"
 ).replace(/\/$/, "");
 
 export const SITE = {
   name: "Distrinova",
   legalName: "Distrinova S.R.L.",
-  finalDomain: "distrinovagroup.com",
+  finalDomain: "www.distrinovagroup.com",
   email: "info@distrinovagroup.com",
   phoneE164: "+5491176158992",
   phoneDisplay: "+54 9 11 7615-8992",
