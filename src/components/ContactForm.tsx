@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useRef, useEffect, type FormEvent } from "react";
 import { Mail, Loader2, CheckCircle2 } from "lucide-react";
 import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
 import { PRODUCTS } from "@/lib/products";
@@ -17,6 +17,12 @@ type Status = "idle" | "sending" | "sent" | "error";
 export function ContactForm() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<Status>("idle");
+  const sentRef = useRef<HTMLDivElement>(null);
+
+  // Al enviarse bien, llevar el mensaje de confirmación a la vista.
+  useEffect(() => {
+    if (status === "sent") sentRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, [status]);
 
   const read = (form: HTMLFormElement) => {
     const d = new FormData(form);
@@ -94,7 +100,7 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-center backdrop-blur-xl">
+      <div ref={sentRef} className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-center backdrop-blur-xl scroll-mt-28">
         <CheckCircle2 className="h-14 w-14 text-accent-cyan" aria-hidden="true" />
         <h3 className="font-display text-2xl font-bold text-white">¡Mensaje enviado!</h3>
         <p className="max-w-md text-slate-300">Recibimos tu consulta y te vamos a responder a la brevedad al correo que dejaste. Gracias por escribirnos.</p>
