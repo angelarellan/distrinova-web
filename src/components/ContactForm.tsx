@@ -60,38 +60,57 @@ export function ContactForm() {
     window.open(waLink(text(v)), "_blank", "noopener,noreferrer");
   };
 
+  const markSent = (form: HTMLFormElement) => {
+    setStatus("sent");
+    form.reset();
+    setErrors({});
+  };
+
+  // Respaldo: Web3Forms (se usa solo si el envío por SMTP propio todavía no está configurado).
+  const sendViaWeb3Forms = async (v: ReturnType<typeof read>) => {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_KEY,
+        subject: `Consulta web Distrinova${v.producto ? ` — ${v.producto}` : ""}`,
+        from_name: "Formulario web Distrinova",
+        replyto: v.email,
+        Nombre: v.nombre,
+        Empresa: v.empresa || "—",
+        Email: v.email,
+        Teléfono: v.telefono || "—",
+        "Producto de interés": v.producto || "—",
+        Mensaje: v.mensaje,
+        botcheck: "",
+      }),
+    });
+    const data = await res.json().catch(() => ({}));
+    return Boolean(data.success);
+  };
+
   const sendEmail = async (e: FormEvent<HTMLButtonElement>) => {
     const form = e.currentTarget.form!;
     const v = read(form);
     if (!validate(v)) return;
     setStatus("sending");
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      // 1) Intento por SMTP propio (llega directo a la bandeja).
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          subject: `Consulta web Distrinova${v.producto ? ` — ${v.producto}` : ""}`,
-          from_name: "Formulario web Distrinova",
-          replyto: v.email,
-          Nombre: v.nombre,
-          Empresa: v.empresa || "—",
-          Email: v.email,
-          Teléfono: v.telefono || "—",
-          "Producto de interés": v.producto || "—",
-          Mensaje: v.mensaje,
-          botcheck: "",
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(v),
       });
-      const data = await res.json();
-      if (data.success) {
-        setStatus("sent");
-        form.reset();
-        setErrors({});
-      } else {
-        setStatus("error");
-      }
+      const data = await res.json().catch(() => ({}));
+      if (data.ok) return markSent(form);
+      // 2) Si el SMTP aún no está configurado, uso el respaldo (Web3Forms).
+      if (data.configured === false && (await sendViaWeb3Forms(v))) return markSent(form);
+      setStatus("error");
     } catch {
+      // Si la API falla, último intento con el respaldo.
+      try {
+        if (await sendViaWeb3Forms(v)) return markSent(form);
+      } catch {}
       setStatus("error");
     }
   };
