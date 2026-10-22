@@ -1,13 +1,13 @@
 /** URL base del sitio en producción (dominio propio). Se puede sobreescribir con NEXT_PUBLIC_SITE_URL. */
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://www.distrinovagroup.com"
+  "https://distrinovagroup.com"
 ).replace(/\/$/, "");
 
 export const SITE = {
   name: "Distrinova",
   legalName: "Distrinova S.R.L.",
-  finalDomain: "www.distrinovagroup.com",
+  finalDomain: "distrinovagroup.com",
   email: "info@distrinovagroup.com",
   phoneE164: "+5491176158992",
   phoneDisplay: "+54 9 11 7615-8992",
