@@ -1,11 +1,12 @@
 // Datos migrados del Catálogo Distrinova Oil & Gas 2026 (fichas 05/2025).
-export type CategoryKey = "sellado" | "valvulas" | "canerias";
+export type CategoryKey = "sellado" | "valvulas" | "canerias" | "otros";
 
-// Orden de aparición en /productos (criterio de importancia del cliente): accesorios → válvulas → juntas al final.
+// Orden de aparición en /productos (criterio de importancia del cliente): accesorios → válvulas → juntas → otros al final.
 export const CATEGORY_LABEL: Record<CategoryKey, string> = {
   canerias: "Accesorios de cañería",
   valvulas: "Válvulas",
   sellado: "Juntas industriales",
+  otros: "Otros productos",
 };
 
 /** Subgrupos dentro de cada categoría (criterio habitual de la industria: sellado dinámico vs. estático, tipo de válvula, tipo de accesorio). */
@@ -22,6 +23,7 @@ export const GROUPS: Record<CategoryKey, { label: string; hint: string }[]> = {
     { label: "Codos y tapas", hint: "Cambios de dirección y cierres de cañería para soldar" },
     { label: "Tees y reducciones", hint: "Derivaciones y cambios de diámetro para soldar" },
   ],
+  otros: [],
 };
 
 export interface Table {
@@ -618,6 +620,34 @@ const CATALOG: Omit<Product, "brand">[] = [
     features: [],
     pending: true,
   },
+  {
+    id: "electrodos",
+    name: "Electrodos y alambre para soldar",
+    subtitle: "Hardweld · 7018 · 6013 · 316L",
+    category: "otros",
+    group: "Electrodos",
+    image: "/products/electrodos.webp",
+    imageFit: "cover",
+    description: "Electrodos y alambre para soldar Hardweld: 7018 (bajo hidrógeno), 6013 (uso general) y 316L (acero inoxidable). Ficha técnica en preparación.",
+    highlights: [],
+    specs: [],
+    features: [],
+    pending: true,
+  },
+  {
+    id: "niples",
+    name: "Niples",
+    subtitle: "Roscados · Acero",
+    category: "otros",
+    group: "Niples",
+    image: "/products/niples.webp",
+    imageFit: "cover",
+    description: "Niples roscados de acero en distintas medidas y largos. Ficha técnica en preparación.",
+    highlights: [],
+    specs: [],
+    features: [],
+    pending: true,
+  },
 ];
 
 // Orden de aparición en /productos y en todas las industrias (prioridad definida por el cliente):
@@ -627,6 +657,7 @@ const DISPLAY_ORDER = [
   "codos-y-tapas", "tees-y-reducciones", "acople-ranurado", "esparragos-tuercas",
   "valvula-esferica-3c-acero", "valvula-esferica-3c-inox", "valvula-esferica-2c-inox", "valvula-mariposa",
   "junta-espiralada-cgi", "empaquetadura-teflon", "empaquetadura-grafitada", "empaquetadura-grafito-puro", "cinta-ptfe-expandido",
+  "electrodos", "niples",
 ];
 
 export const PRODUCTS: Product[] = CATALOG.map((p) => ({ ...p, brand: "DNova" })).sort(

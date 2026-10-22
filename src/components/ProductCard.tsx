@@ -17,7 +17,6 @@ export function ProductCard({ product: p, sizes = "(min-width:1024px) 400px, (mi
               <span className="text-xs font-medium uppercase tracking-wide">Foto próximamente</span>
             </div>
           )}
-          <span className="absolute left-3 top-3 rounded-full bg-accent-cyan/90 px-3 py-1 text-xs font-semibold text-ink-950">Próximamente</span>
         </div>
         <div className="flex flex-1 flex-col p-6">
           <h3 className="font-display text-lg font-semibold leading-snug text-white">{p.name}</h3>
