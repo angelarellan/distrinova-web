@@ -622,7 +622,7 @@ const CATALOG: Omit<Product, "brand">[] = [
   },
   {
     id: "electrodos",
-    name: "Electrodos y alambre para soldar",
+    name: "Electrodos",
     subtitle: "Hardweld · 7018 · 6013 · 316L",
     category: "otros",
     group: "Electrodos",
